@@ -40,13 +40,4 @@ Shardhana는 그 첫걸음을 내딛습니다.
 
 ---
 
-## 📅 Project Journal
-
-### 2025-08-15 — Project Kick-off 🇰🇷
-- Repository **shardhana** created  
-- Project purpose, vision, and goals defined  
-- README initialized to mark the 80th Korean Liberation Day  
-
----
-
 *Maintainer: [Seok Lee](https://github.com/michin-jjangddol)*
