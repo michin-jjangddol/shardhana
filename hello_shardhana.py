@@ -1,1 +1,5 @@
-print("Welcome to Shardhana Project!")
+print("=" * 50)
+print("🚀 Welcome to the Shardhana Project 🚀")
+print("An open-source journey into Applied Element Method (AEM)")
+print("Started on August 15, 2025 — 80th Korean Liberation Day 🇰🇷")
+print("=" * 50)
