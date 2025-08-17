@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shardhana Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      /* 🌄 3색 그라데이션 배경 */
+      background: linear-gradient(135deg, #e0f7fa, #ede7f6, #fff9c4);
+      line-height: 1.6;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: rgba(0, 121, 107, 0.9);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #ffca28; /* 헤더 타이틀 포인트: 따뜻한 노란색 */
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: #e0f7fa;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* 섹션별 색상 다르게 */
+    section:nth-child(1) h2 { color: #00796b; } /* 청록 */
+    section:nth-child(2) h2 { color: #8e24aa; } /* 보라 */
+    section:nth-child(3) h2 { color: #ef6c00; } /* 오렌지 */
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shardhana Project</h1>
+    <p>Open-source exploration of the Applied Element Method (AEM)</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Project</h2>
+      <p>
+        Shardhana is an open-source initiative aimed at developing a computational 
+        framework for structural analysis based on the <strong>Applied Element Method (AEM)</strong>.
+        Unlike traditional finite element methods, AEM provides a more natural way to simulate 
+        structural behavior, including failure mechanisms, collapse analysis, and progressive damage.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>
+        The vision of Shardhana is to create a free, collaborative platform where engineers, researchers, 
+        and students can explore advanced analysis techniques. We believe that structural simulation 
+        tools should be both <em>scientifically rigorous</em> and <em>accessible to everyone</em>.
+      </p>
+      <ul>
+        <li>Implement AEM fundamentals in a transparent, open way</li>
+        <li>Encourage community contributions and shared learning</li>
+        <li>Support both research and educational applications</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Get Involved</h2>
+      <p>
+        Shardhana is hosted on GitHub, where you can browse the code, report issues, 
+        or contribute improvements. Whether you are an experienced developer, a researcher, 
+        or a student eager to learn, your participation is welcome.
+      </p>
+      <p>
+        👉 Visit us on <a href="https://github.com/michin-jjangddol/shardhana">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Shardhana Project. Built with collaboration and curiosity.</p>
+  </footer>
+</body>
+</html>
