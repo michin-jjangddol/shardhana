@@ -1,0 +1,7 @@
+# Shardhana Project requirements
+# 설치: pip install -r requirements.txt
+
+# 기본 라이브러리들 (필요할 때 주석 해제)
+numpy
+scipy
+matplotlib
