@@ -40,4 +40,4 @@ Shardhana는 그 첫걸음을 내딛습니다.
 
 ---
 
-*Maintainer: [Seok Lee](https://github.com/michin-jjangddol)*
+*Maintainer: [michin-jjangddol](https://github.com/michin-jjangddol)*
