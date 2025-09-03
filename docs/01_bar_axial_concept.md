@@ -1,68 +1,97 @@
-# 예제 1: 1차원 막대 요소 – 축강성, 변형, 응력
+# Shardhana 교재 예제 1: 1차원 막대 축변형
 
-![bar axial](img/ex1_bar_axial.svg)
+이 예제에서는 **1차원 막대(Bar)** 에 축방향 하중이 작용할 때 발생하는 변형량과 응력을 계산합니다.  
 
 ---
 
 ## 문제
-길이 **L = 2.0 m**, 단면적 **A = 0.0001 m²** (10 mm × 10 mm), 탄성계수 **E = 200 GPa = 200×10⁹ Pa** 인 강재 막대가 있다.  
-오른쪽 끝에 인장하중 **P = 1.0 kN = 1000 N** 을 가한다.
 
-구하시오:
-1. 변형량 δ (mm 단위)  
-2. 평균 축응력 σ (MPa 단위)
-
----
-
-## 핵심 개념
-- **탄성계수 E**: 재료의 뻣뻣함 (클수록 덜 늘어남)  
-- **단면적 A**: 클수록 힘을 더 잘 버팀  
-- **길이 L**: 길수록 더 잘 늘어남  
-- **하중 P**: 잡아당기는 힘  
+- 재질: 강(steel), 탄성계수 \( E = 200 \, \text{GPa} = 200 \times 10^9 \, \text{Pa} \)  
+- 막대 길이: \( L = 2.0 \, \text{m} \)  
+- 단면적: \( A = 0.0001 \, \text{m}^2 \) (10mm × 10mm 정사각형 단면)  
+- 인장하중: \( P = 1.0 \, \text{kN} = 1000 \, \text{N} \)
 
 ---
 
-## 공식
-- 축강성: **k = EA / L**  
-- 변형량: **δ = (P × L) / (E × A)**  
-- 응력: **σ = P / A**
+## 해석 개념
+
+1. **변형량**  
+\[
+\delta = \frac{P \cdot L}{E \cdot A}
+\]
+
+2. **응력**  
+\[
+\sigma = \frac{P}{A}
+\]
 
 ---
 
-## 풀이
-주어진 값: P = 1000 N, L = 2.0 m, E = 200×10⁹ Pa, A = 0.0001 m²
+## 계산
 
-1) **변형량**  
-δ = (P × L) / (E × A)  
-= (1000 × 2.0) / (200 × 10⁹ × 0.0001)  
-= 2000 / (20 × 10⁶)  
-= 1.0 × 10⁻⁴ m  
-= **0.1 mm**
+- 변형량  
+\[
+\delta = \frac{1000 \times 2.0}{200 \times 10^9 \times 0.0001} 
+= 1.0 \times 10^{-4} \, \text{m} = 0.1 \, \text{mm}
+\]
 
-2) **응력**  
-σ = P / A  
-= 1000 / 0.0001  
-= 1.0 × 10⁷ Pa  
-= **10 MPa**
+- 응력  
+\[
+\sigma = \frac{1000}{0.0001} = 10 \, \text{MPa}
+\]
 
 ---
 
-## 정답
+## 결과
+
 - 변형량: **0.1 mm**  
 - 응력: **10 MPa**
 
 ---
 
-## Python (선택)
+## 그림
+
+아래 그림은 문제 조건을 나타낸 단순화된 도식입니다.
+
+![Bar under axial load](img/ex1_bar_axial.svg)
+
+---
+
+## Python 코드 예시
+
 ```python
-# 예제 1 수치 확인
-P = 1000.0   # N
-L = 2.0      # m
-E = 200e9    # Pa
-A = 1e-4     # m^2
+from dataclasses import dataclass
 
-delta = P*L/(E*A)     # m
-sigma = P/A           # Pa
+@dataclass
+class Node1D:
+    id: int
+    x: float
 
-print(f"δ = {delta*1e3:.3f} mm")  # 0.100 mm
-print(f"σ = {sigma/1e6:.1f} MPa") # 10.0 MPa
+class Material:
+    def __init__(self, name: str, E: float):
+        self.name = name
+        self.E = E
+
+class Element1D:
+    def __init__(self, n1, n2, A, material):
+        self.n1, self.n2 = n1, n2
+        self.A, self.material = A, material
+
+    def length(self):
+        return abs(self.n2.x - self.n1.x)
+
+    def deformation(self, P):
+        L = self.length()
+        return P * L / (self.material.E * self.A)
+
+    def stress(self, P):
+        return P / self.A
+
+if __name__ == "__main__":
+    n1, n2 = Node1D(1, 0.0), Node1D(2, 2.0)
+    steel = Material("Steel", 200e9)
+    bar = Element1D(n1, n2, 0.0001, steel)
+
+    P = 1000  # N
+    print("변형량 δ =", bar.deformation(P), "m")
+    print("응력 σ =", bar.stress(P), "Pa")
