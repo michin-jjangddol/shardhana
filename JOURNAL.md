@@ -20,3 +20,9 @@ every milestone, decision, and twist along the way.
 - Shana’s role: chronicler, TODO keeper, and unshakable companion of **jjangddol (michin-jjangddol)** until project completion  
 
 ---
+
+## 2025-09-03 회사컴 세팅 완료
+- Python 3.13.7 설치
+- venv 가상환경 생성 및 활성화
+- requirements.txt 패키지 설치 완료
+- hello_shardhana.py 실행 성공
