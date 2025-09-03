@@ -65,4 +65,4 @@
 
 ## 참고 그림
 
-(여기에 막대 그림 삽입 예정)
+![2 m bar with 1 kN tension](img/bar_1d.svg)
