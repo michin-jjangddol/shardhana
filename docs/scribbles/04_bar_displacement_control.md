@@ -38,7 +38,7 @@ Pu = sigma_u * A = 450e6 * 1e-4 = 45,000 N = 45 kN.
 ## 도식(SVG)
 예제 4 개념 그림:
 
-![예제4 도식](../img/bar_ex4.svg)
+![예제4 도식](./img/bar_ex4.svg)
 
 ---
 
