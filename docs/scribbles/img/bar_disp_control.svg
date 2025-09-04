@@ -1,0 +1,57 @@
+<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f77b4"/>
+    </marker>
+  </defs>
+
+  <!-- 제목 -->
+  <text x="450" y="24" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#222">
+    변위 제어(Displacement Control): 위단 변위 Δ(t) 부여, 하중 P–Δ 곡선 관찰
+  </text>
+
+  <!-- 좌측: 수직 막대 (하단 고정, 상단 변위 제어) -->
+  <g transform="translate(120,48)">
+    <!-- 막대 -->
+    <rect x="90" y="40" width="30" height="190" fill="#cfd8dc" stroke="#455a64"/>
+    <!-- 바닥 고정 해치 -->
+    <line x1="60" y1="230" x2="240" y2="230" stroke="#455a64" stroke-width="2"/>
+    <g stroke="#455a64">
+      <line x1="65"  y1="230" x2="72"  y2="245"/>
+      <line x1="80"  y1="230" x2="87"  y2="245"/>
+      <line x1="95"  y1="230" x2="102" y2="245"/>
+      <line x1="110" y1="230" x2="117" y2="245"/>
+      <line x1="125" y1="230" x2="132" y2="245"/>
+      <line x1="140" y1="230" x2="147" y2="245"/>
+      <line x1="155" y1="230" x2="162" y2="245"/>
+      <line x1="170" y1="230" x2="177" y2="245"/>
+      <line x1="185" y1="230" x2="192" y2="245"/>
+      <line x1="200" y1="230" x2="207" y2="245"/>
+      <line x1="215" y1="230" x2="222" y2="245"/>
+    </g>
+
+    <!-- 길이 주석 -->
+    <line x1="135" y1="40" x2="135" y2="230" stroke="#666" stroke-dasharray="5,5"/>
+    <line x1="130" y1="40" x2="140" y2="40" stroke="#666"/>
+    <line x1="130" y1="230" x2="140" y2="230" stroke="#666"/>
+    <text x="140" y="140" font-family="sans-serif" font-size="13" fill="#444">L = 2.0 m</text>
+
+    <!-- 위단 변위 제어 -->
+    <line x1="105" y1="40" x2="105" y2="10" stroke="#1f77b4" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="30" y="20" font-family="sans-serif" font-size="13" fill="#1f77b4">Δ(t) = Δ₀ + r·t</text>
+
+    <!-- 재료/단면 요약 -->
+    <text x="0" y="270" font-family="sans-serif" font-size="12" fill="#333">
+      E = 200 GPa,  A = 10×10 mm²,  σ_y = 250 MPa,  σ_u = 450 MPa
+    </text>
+  </g>
+
+  <!-- 우측 설명 -->
+  <g transform="translate(520,70)" font-family="sans-serif" font-size="13" fill="#222">
+    <text x="0" y="0">• 변위 제어: Δ → ε = Δ/L → σ, P를 계산</text>
+    <text x="0" y="22">• 손상 D∈[0,1],  E_eff = (1−D)·E</text>
+    <text x="0" y="44">• 규칙: σ ≤ σ_y ⇒ D=0,  σ_y&lt;σ&lt;σ_u ⇒ D=(σ−σ_y)/(σ_u−σ_y),  σ≥σ_u ⇒ 파괴</text>
+    <text x="0" y="66">• 하중: P = σ·A</text>
+    <text x="0" y="100">출력: P–Δ 곡선(탄성→연화→파괴)</text>
+  </g>
+</svg>
