@@ -1,0 +1,56 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d1495b"/>
+    </marker>
+  </defs>
+
+  <!-- 제목 -->
+  <text x="450" y="22" text-anchor="middle" font-family="sans-serif" font-size="16">
+    점증 하중에 따른 손상–파괴 (1D 막대) : P(t) = 10 kN + 5 kN·t
+  </text>
+
+  <!-- 왼쪽: 수직 막대(고정 하단, 위쪽 인장) -->
+  <g transform="translate(120, 40)">
+    <!-- 막대 -->
+    <rect x="80" y="40" width="30" height="180" fill="#a0c4ff" stroke="#333"/>
+    <!-- 바닥 고정 해치 -->
+    <line x1="60" y1="220" x2="220" y2="220" stroke="#333" stroke-width="2"/>
+    <g stroke="#333">
+      <line x1="65"  y1="220" x2="72"  y2="235"/>
+      <line x1="80"  y1="220" x2="87"  y2="235"/>
+      <line x1="95"  y1="220" x2="102" y2="235"/>
+      <line x1="110" y1="220" x2="117" y2="235"/>
+      <line x1="125" y1="220" x2="132" y2="235"/>
+      <line x1="140" y1="220" x2="147" y2="235"/>
+      <line x1="155" y1="220" x2="162" y2="235"/>
+      <line x1="170" y1="220" x2="177" y2="235"/>
+      <line x1="185" y1="220" x2="192" y2="235"/>
+      <line x1="200" y1="220" x2="207" y2="235"/>
+    </g>
+    <!-- 길이 표기 -->
+    <line x1="130" y1="40" x2="130" y2="220" stroke="#333" stroke-dasharray="5,5"/>
+    <line x1="125" y1="40" x2="135" y2="40" stroke="#333"/>
+    <line x1="125" y1="220" x2="135" y2="220" stroke="#333"/>
+    <text x="138" y="135" font-family="sans-serif" font-size="13">L = 2.0 m</text>
+
+    <!-- 상단 인장 하중(위로) -->
+    <line x1="95" y1="40" x2="95" y2="10" stroke="#d1495b" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="35" y="20" font-family="sans-serif" font-size="13" fill="#d1495b">P(t) = 10 kN + 5 kN·t</text>
+
+    <!-- 재료/단면 요약 -->
+    <text x="0" y="260" font-family="sans-serif" font-size="12">
+      E = 200 GPa,  A = 10×10 mm²,  σ_y = 250 MPa,  σ_u = 450 MPa
+    </text>
+  </g>
+
+  <!-- 오른쪽: 범례/설명 -->
+  <g transform="translate(520, 70)" font-family="sans-serif" font-size="13">
+    <text x="0" y="0">• 손상 D: 0(건전) → 1(파괴)</text>
+    <text x="0" y="22">• E_eff = (1 - D) · E</text>
+    <text x="0" y="44">• σ = P / A,  δ = P·L / (E_eff·A)</text>
+    <text x="0" y="66">• 파괴 기준: σ ≥ σ_u (450 MPa)</text>
+    <text x="0" y="110">하중 이력 예:</text>
+    <text x="0" y="132">t = 0,1,2,… s  /  P(t) = 10, 15, 20, … [kN]</text>
+  </g>
+</svg>
