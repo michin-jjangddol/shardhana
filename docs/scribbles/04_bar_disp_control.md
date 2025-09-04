@@ -1,120 +1,112 @@
-# 예제 4: 변위 제어(Displacement Control) – 1D 손상–파괴 맛보기
+# 예제 4 — 변위 제어(Displacement Control) : 하중–변위 곡선
 
-이 예제는 수직 막대 상단에 **변위 Δ(t)** 를 시간에 따라 부여(변위 제어)하고, 그때 필요한 **하중 P**와 **손상 진행**을 관찰한다.  
-도식: ![disp control](img/bar_disp_control.svg)
+이 예제는 1차원 막대(길이 L=2.0 m, 단면 A=10×10 mm²=0.0001 m², 강재 E=200 GPa)에
+**변위를 점진적으로 증가**시키며 하중–변위(P–Δ) 거동을 그려 봅니다.
+개념 모델은 **탄성 → 경화(hardening) → 연화(softening) → 파괴** 순서입니다.
 
----
-
-## 1. 모델 / 재료 / 입력
-- 재료: E = 200 GPa, 항복강도 σ_y = 250 MPa, 극한강도 σ_u = 450 MPa
-- 기하: L = 2.0 m, A = 0.0001 m² (10×10 mm²)
-- 변위 이력: Δ(t) = Δ0 + r·t
-  - 예시 값: Δ0 = 0.0 mm, r = 0.5 mm/s  (필요 시 문서에서 쉽게 바꿀 수 있음)
-
-도움말:
-- 변형률 ε = Δ / L
-- 손상 D ∈ [0,1], 유효강성 E_eff = (1 − D) · E
-- 응력–손상 규칙(선형 소프트닝):
-  - σ ≤ σ_y  → D = 0
-  - σ_y < σ < σ_u → D = (σ − σ_y) / (σ_u − σ_y)
-  - σ ≥ σ_u → D = 1 (파괴)
-- 평형: σ = E_eff · ε = (1 − D) · E · ε
-- 하중: P = σ · A
-
-※ D가 σ에, σ가 D에 의존하므로, 각 시간 단계에서 간단한 반복(고정점)으로 D–σ를 맞춘다.
+> ⚠️ 단위 확인  
+> 단면 \(A=0.0001\,\text{m}^2\) 이므로 극한응력 \(\sigma_u=450\,\text{MPa}\)에서  
+> \(P_u=\sigma_u A = 450\times 10^6 \times 10^{-4} = 45\,\text{kN}\) 입니다. (450 kN 아님)
 
 ---
 
-## 2. 결과 해석 포인트
-- 초기(탄성): D = 0 → P가 Δ에 비례(직선).
-- 연화: D ↑ → E_eff ↓ → 작은 Δ 증가에도 P가 덜 증가 또는 감소(곡선 꺾임).
-- 파괴: σ ≥ σ_u 도달 시 D = 1 → 강성 소실로 해석 중단.
+## 입력 요약
+
+- 탄성계수: \(E=200\,\text{GPa}\)
+- 단면적: \(A=0.0001\,\text{m}^2\) (10×10 mm²)
+- 길이: \(L=2.0\,\text{m}\)
+- 항복응력: \(\sigma_y=250\,\text{MPa}\)
+- 극한응력: \(\sigma_u=450\,\text{MPa}\)
+- 변위 이력: 속도 \( \dot{\Delta}=1.0\,\text{mm/s} \) (변위 제어)
+
+경화/연화 구간의 변형률 경계(개념값):
+- 항복 변형률 \( \varepsilon_y = \sigma_y/E \approx 0.00125 \Rightarrow \Delta_y \approx 2.5\,\text{mm}\)
+- 극한 변형률 \( \varepsilon_u \approx 0.003 \Rightarrow \Delta_u \approx 6.0\,\text{mm}\)
+- 파괴 변형률 \( \varepsilon_f \approx 0.006 \Rightarrow \Delta_f \approx 12.0\,\text{mm}\)
 
 ---
 
-## 3. 파이썬 코드 (P–Δ 곡선 및 시간표시)
-> 가상환경에서 `pip install matplotlib` 후 실행하세요.
+## 핵심 결과
+
+| 구간/지점 | 변위 Δ [mm] | 시간 t [s] (Δ=1.0 mm/s 가정) | 응력 σ [MPa] | 하중 P [kN] |
+|---|---:|---:|---:|---:|
+| 항복 시작 \( \Delta_y \) | **≈ 2.50** | **≈ 2.50** | ≈ 250 | ≈ 25 |
+| 극한 하중 \( \Delta_u \) | **≈ 6.00** | **≈ 6.00** | **≈ 450** | **≈ 45** |
+| 파괴(거동 소실) \( \Delta_f \) | **≈ 12.00** | **≈ 12.00** | → 0 | → 0 |
+
+- **P–Δ 곡선**: 처음엔 직선(탄성), 이후 완만한 증가(경화),  
+  피크(≈45 kN) 뒤로 **하중 감소(연화/파괴)** 구간이 나타난다.  
+- 변위 제어라서 **피크 이후 거동도 안정적으로 관찰**된다(하중 제어와 대비되는 장점).
+
+---
+
+## 그래프
+
+> 저장한 그림을 참조 이미지로 링크합니다. (아래 코드로 생성)
+
+![P–Δ 곡선](../img/ex4_p_delta.png)
+
+---
+
+## 파이썬 코드 (그래프/데이터 생성 및 저장)
 
 ```python
-# 예제 4: 변위 제어(Displacement Control) - 1D 손상/파괴 간단 모델
-# Δ(t) = Δ0 + r * t 를 부여하고 P–Δ 곡선을 그림
-
-import math
+# docs/scribbles/make_ex4_plot.py  같은 위치에서 실행 예
+import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
+from pathlib import Path
 
 # ----- 재료/기하 -----
-E = 200e9        # Pa
-A = 1.0e-4       # m^2
-L = 2.0          # m
-sigma_y = 250e6  # Pa
-sigma_u = 450e6  # Pa
+E = 200e9       # Pa
+A = 1.0e-4      # m^2
+L = 2.0         # m
+sigma_y = 250e6 # Pa
+sigma_u = 450e6 # Pa
 
-# ----- 변위 이력 -----
-d0_mm = 0.0      # 초기 변위 [mm]
-rate_mm_s = 0.5  # 변위 증가 속도 [mm/s]
-dt = 1.0         # 시간 간격 [s]
-t_max = 60       # 최대 시간 [s] (충분히 크게)
+# 개념용 변형률 경계(경화/연화)
+eps_y = sigma_y / E      # ≈0.00125 => Δy≈2.5 mm
+eps_u = 0.0030           # Δu≈6.0 mm (피크)
+eps_f = 0.0060           # Δf≈12.0 mm (파괴)
 
-def update_damage(sigma):
-    if sigma <= sigma_y:
-        return 0.0
-    if sigma >= sigma_u:
-        return 1.0
-    return (sigma - sigma_y) / (sigma_u - sigma_y)
+# ----- 변위 이력(변위 제어) -----
+rate_mm_s = 1.0
+dt = 0.1
+t_max = 30.0
+t = np.arange(0, t_max + dt, dt)
+delta_mm = rate_mm_s * t
+eps = (delta_mm / 1000.0) / L
 
-ts, deltas_mm, sigmas_MPa, Ps_kN, Ds = [], [], [], [], []
-t_fail = None
+def sigma_of_eps(e):
+    if e <= eps_y:                           # 탄성
+        return E * e
+    if e <= eps_u:                           # 경화 (선형 가정)
+        H = (sigma_u - sigma_y) / (eps_u - eps_y)
+        return sigma_y + H * (e - eps_y)
+    if e <= eps_f:                           # 연화 (선형 가정)
+        return sigma_u * max(0.0, 1.0 - (e - eps_u)/(eps_f - eps_u))
+    return 0.0
 
-for step in range(int(t_max/dt) + 1):
-    t = step * dt
-    delta_mm = d0_mm + rate_mm_s * t
-    epsilon = (delta_mm / 1000.0) / L  # mm -> m 변환 후 /L
+sigma = np.array([sigma_of_eps(e) for e in eps])
+P_kN = sigma * A / 1000.0
 
-    # 고정점 반복으로 D-σ 일치
-    D = 0.0
-    for _ in range(100):
-        sigma = (1.0 - D) * E * epsilon
-        newD = update_damage(sigma)
-        if abs(newD - D) < 1e-6:
-            D = newD
-            break
-        D = newD
+# ----- 그래프 저장 -----
+out_dir = Path(__file__).resolve().parents[0] / "img"
+out_dir.mkdir(parents=True, exist_ok=True)
+fig_path = out_dir / "ex4_p_delta.png"
 
-    # 파괴 체크
-    if D >= 1.0:
-        t_fail = t
-        # 기록 후 루프 종료
-        ts.append(t)
-        deltas_mm.append(delta_mm)
-        sigmas_MPa.append(sigma / 1e6)
-        Ps_kN.append((sigma * A) / 1000.0)
-        Ds.append(D)
-        break
-
-    # 정리
-    ts.append(t)
-    deltas_mm.append(delta_mm)
-    sigmas_MPa.append(sigma / 1e6)
-    Ps_kN.append((sigma * A) / 1000.0)
-    Ds.append(D)
-
-# 출력 요약
-if t_fail is not None:
-    print(f"Failure at t = {t_fail:.1f} s  |  Δ = {deltas_mm[-1]:.3f} mm  |  P = {Ps_kN[-1]:.2f} kN  |  σ = {sigmas_MPa[-1]:.0f} MPa")
-else:
-    print("No failure within time window.")
-
-# 그래프: P-Δ, 그리고 시간 라벨
-fig = plt.figure(figsize=(8,5))
-ax1 = plt.gca()
-ax1.plot(deltas_mm, Ps_kN, label="P–Δ curve")
-ax1.set_xlabel("Δ [mm]")
-ax1.set_ylabel("P [kN]")
-ax1.grid(True, alpha=0.3)
-if t_fail is not None:
-    ax1.axvline(deltas_mm[-1], linestyle=":", color="gray", label=f"Failure at t={t_fail:.1f}s")
-
-plt.title("Displacement Control: Load P vs Displacement Δ")
+plt.figure(figsize=(7,5))
+plt.plot(delta_mm, P_kN, marker="o", label="P–Δ (displacement control)")
+plt.axvline(eps_y*L*1000, color="gray", linestyle="--", alpha=0.5, label="yield δ_y")
+plt.axvline(eps_u*L*1000, color="gray", linestyle=":",  alpha=0.7, label="ultimate δ_u")
+plt.xlabel("Displacement Δ [mm]")
+plt.ylabel("Load P [kN]")
+plt.title("Bar: Elastic → Hardening → Softening → Failure")
+plt.grid(alpha=0.3)
 plt.legend()
 plt.tight_layout()
-plt.show()
+plt.savefig(fig_path, dpi=160)
+print(f"saved: {fig_path}")
+
+# ----- 결과 요약 -----
+print(f"Δ_y ≈ {eps_y*L*1000:.2f} mm,  Δ_u ≈ {eps_u*L*1000:.2f} mm (P_u ≈ {sigma_u*A/1000.0:.1f} kN),  Δ_f ≈ {eps_f*L*1000:.2f} mm")
