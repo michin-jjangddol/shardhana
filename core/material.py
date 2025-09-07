@@ -29,3 +29,12 @@ class Material:
 if __name__ == "__main__":
     steel = Material(name="Steel", density=7850, elasticity=2.1e11)
     print(steel.info())
+
+class Material:
+    def __init__(self, name: str, E: float, density: float):
+        self.name = name       # 재질 이름
+        self.E = E             # 탄성계수 (Elastic Modulus)
+        self.density = density # 밀도
+
+    def __repr__(self):
+        return f"Material(name={self.name}, E={self.E}, density={self.density})"

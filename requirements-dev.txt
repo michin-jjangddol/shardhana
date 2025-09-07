@@ -1,0 +1,6 @@
+# Shardhana Project - Development Requirements
+# 설치: pip install -r requirements-dev.txt
+
+-r requirements.txt   # 실행용 요구사항 먼저 설치
+
+pytest               # 테스트 프레임워크
