@@ -6,7 +6,7 @@ Shardhana: 1차원 막대 요소 (축강성)
 
 from dataclasses import dataclass
 import math
-from material import Material
+from .material import Material
 @dataclass
 class Node1D:
     id: int
@@ -23,13 +23,13 @@ class Node1D:
     
 
 # 재료(Material) 클래스를 정의한다. (이름, 탄성계수 E)
-class Material:
-    def __init__(self, name: str, elasticity: float):
-        self.name = name
-        self.elasticity = elasticity  # 탄성계수 E (Pa)
-
-    def __repr__(self) -> str:
-        return f"Material(name={self.name}, E={self.elasticity} Pa)"
+# class Material:
+#    def __init__(self, name: str, elasticity: float):
+#        self.name = name
+#        self.elasticity = elasticity  # 탄성계수 E (Pa)
+#
+#    def __repr__(self) -> str:
+#        return f"Material(name={self.name}, E={self.elasticity} Pa)"
 
 
 # Element1D 클래스를 정의한다.
@@ -50,14 +50,34 @@ class Element1D:
         L = self.length()
         if L == 0:
             raise ValueError("길이가 0인 요소는 허용되지 않습니다.")
-        E = self.material.elasticity
+        
+        # E 참조를 탄성계수 명칭 변화에 견고하게
+        E = getattr(self.material, "elasticity", None)
+        if E is None:
+            E = getattr(self.material, "E", None)
+        if E is None:
+            raise AttributeError("Material must have 'elasticity' or 'E'.")
+
         A = self.area
         k = E * A / L  # 축강성 k = E*A/L
         return k
 
+    def local_stiffness_matrix(self) -> list[list[float]]:
+        """1D 막대 요소의 로컬 강성행렬 (2x2)"""
+        k = self.stiffness()
+        return [[k, -k],
+                [-k, k]]
+        
     def deformation(self, P: float) -> float:
         L = self.length()
-        E = self.material.elasticity
+        
+        # E 참조를 탄성계수 명칭 변화에 견고하게
+        E = getattr(self.material, "elasticity", None)
+        if E is None:
+            E = getattr(self.material, "E", None)
+        if E is None:
+            raise AttributeError("Material must have 'elasticity' or 'E'.")
+        
         A = self.area
         if E * A == 0:
             raise ValueError("재료의 탄성계수와 단면적은 0이 될 수 없습니다.")
@@ -65,8 +85,12 @@ class Element1D:
         return delta
 
     def __repr__(self) -> str:
+        # elasticity 또는 E 어느 쪽이든 대응
+        E = getattr(self.material, "elasticity", None)
+        if E is None:
+            E = getattr(self.material, "E", None)
         return (f"Element1D(n1={self.n1.id}, n2={self.n2.id}, A={self.area} m^2, "
-                f"E={self.material.elasticity} Pa, L={self.length()} m, k={self.stiffness()} N/m)")
+                f"E={E} Pa, L={self.length()} m, k={self.stiffness()} N/m)")
         
 # 1D 막대(Bar1D) 클래스를 정의한다.
 # - 두 노드(Node1D)로 구성
@@ -88,9 +112,10 @@ class Element1D:
 if __name__ == "__main__":
     n1 = Node1D(1, 0.0)
     n2 = Node1D(2, 2.0)  # L = 2.0
-    steel = Material("steel", 200e9)
+    steel = Material("Steel", 7850, 200e9)
     bar = Element1D(n1, n2, area=0.01, material=steel)
 
     print("길이 L =", bar.length())                 # 2.0
     print("강성 k =", bar.stiffness())              # 1.0e9
     print("변형 δ(1000N) =", bar.deformation(1000)) # 1.0e-6
+    print("K_local =", bar.local_stiffness_matrix())
