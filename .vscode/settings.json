@@ -1,0 +1,30 @@
+{
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.enablePersistentSessions": false,
+
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "args": [
+        "-l",
+        "-c",
+        ". \"${workspaceFolder}/venv/bin/activate\" 2>/dev/null || true; exec bash -l"
+      ]
+    }
+  },
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell (auto-venv)",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (auto-venv)": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "if (Test-Path \"${workspaceFolder}\\venv\\Scripts\\Activate.ps1\") { & \"${workspaceFolder}\\venv\\Scripts\\Activate.ps1\" } else { Write-Host \"[warn] venv missing\" }"
+      ]
+    }
+  },
+
+  "python.terminal.activateEnvironment": false
+}
