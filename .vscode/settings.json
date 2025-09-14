@@ -1,13 +1,31 @@
 {
+  // ───── Python 인터프리터 경로 ─────
+  // Windows 환경 (PowerShell)
   "python.defaultInterpreterPath": "venv\\Scripts\\python.exe",
+
+  // WSL 환경 (Linux)
+  "python.defaultInterpreterPath@linux": "${workspaceFolder}/venv/bin/python",
+
+  // 터미널 열 때 자동 활성화
   "python.terminal.activateEnvironment": true,
 
+  // ───── 터미널 프로필 ─────
+  "terminal.integrated.defaultProfile.windows": "PowerShell (venv)",
   "terminal.integrated.profiles.windows": {
-    "Shardhana (venv)": {
-      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-      "args": ["-NoExit", "-Command", ".\\venv\\Scripts\\Activate.ps1"],
-      "icon": "terminal-powershell"
+    "PowerShell (venv)": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Shardhana (venv)"
+
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "args": ["-l"]
+    }
+  },
+
+  // ───── 터미널 공통 옵션 ─────
+  "terminal.integrated.cwd": "${workspaceFolder}",    // 새 터미널 시작 위치
+  "terminal.integrated.enablePersistentSessions": false
 }
