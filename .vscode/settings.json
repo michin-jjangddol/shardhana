@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "venv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+
+  "terminal.integrated.profiles.windows": {
+    "Shardhana (venv)": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-NoExit", "-Command", ".\\venv\\Scripts\\Activate.ps1"],
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Shardhana (venv)"
+}
