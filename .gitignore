@@ -52,7 +52,7 @@ coverage.xml
 
 # PyCharm / VSCode / IDEs
 .idea/
-.vscode/
+#.vscode/
 *.swp
 
 # System files
