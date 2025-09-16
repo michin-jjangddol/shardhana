@@ -15,12 +15,16 @@
   },
 
   // 윈도우 기본 터미널은 PowerShell
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-    }
-  },
+"terminal.integrated.profiles.windows": {
+  "PowerShell": {
+    "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": [
+      "-NoExit",
+      "-Command",
+      "if (Test-Path \"${workspaceFolder}\\venv\\Scripts\\Activate.ps1\") { & \"${workspaceFolder}\\venv\\Scripts\\Activate.ps1\" } else { Write-Host \"[warn] venv missing (run: py -m venv venv)\" }"
+    ]
+  }
+},
 
   // Python 확장이 가상환경 자동 활성화
   "python.terminal.activateEnvironment": false,
