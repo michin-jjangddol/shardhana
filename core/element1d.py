@@ -15,3 +15,19 @@ class Element1D:
 
     def axial_delta(self) -> float:
         return self.n2.u - self.n1.u
+    
+    def axial_force(self) -> float:
+        L = self.length
+        return self.material.E * self.A / L * self.axial_delta()
+    
+    def summary(self) -> str:
+        return (
+            "=== Element1D Summary ===\n"
+            f"x1     = {self.n1.x}, u1 = {self.n1.u}\n"
+            f"x2     = {self.n2.x}, u2 = {self.n2.u}\n"
+            f"L      = {self.length}\n"
+            f"delta  = {self.axial_delta()}\n"
+            f"E      = {self.material.E}\n"
+            f"A      = {self.A}\n"
+            f"N      = {self.axial_force()}\n"
+    )
