@@ -23,8 +23,10 @@ class Element1D:
     def summary(self) -> str:
         return (
             "=== Element1D Summary ===\n"
-            f"x1     = {self.n1.x}, u1 = {self.n1.u}\n"
-            f"x2     = {self.n2.x}, u2 = {self.n2.u}\n"
+            f"x1     = {self.n1.x}\n"
+            f"u1     = {self.n1.u}\n"
+            f"x2     = {self.n2.x}\n"
+            f"u2     = {self.n2.u}\n"
             f"L      = {self.length}\n"
             f"delta  = {self.axial_delta()}\n"
             f"E      = {self.material.E}\n"
