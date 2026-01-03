@@ -40,4 +40,23 @@ Shardhana는 그 첫걸음을 내딛습니다.
 
 ---
 
-*Maintainer: [michin-jjangddol](https://github.com/michin-jjangddol)*
+## 🔐 License
+
+Shardhana is released under the **GNU General Public License v3.0 (GPL-3.0)**,  
+as published by the Free Software Foundation on **June 29, 2007**.
+
+This license grants you the freedom to:
+- use the software for any purpose,
+- study how it works and modify it,
+- redistribute original or modified versions,
+
+as long as derivative works remain under the same GPL license.
+
+See the [`LICENSE`](./LICENSE) file for the full license text.
+
+---
+
+### 👤 Maintainer
+
+[michin-jjangddol](https://github.com/michin-jjangddol)
+
