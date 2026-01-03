@@ -145,8 +145,8 @@ Thus, the meter is:
 - A universally agreed reference for distance
 
 Reference:
-- BIPM – SI definition of the meter  
-  https://www.bipm.org/en/measurement-units/si-definitions/meter
+- BIPM – SI base unit: metre (m)  
+  https://www.bipm.org/en/si-base-units/metre
 
 ---
 
@@ -317,8 +317,8 @@ Shardhana에서는 **Length(길이)** 와 **Distance(거리)** 를
 - 인류가 합의한 가장 보편적인 기준 거리이다.
 
 참고:
-- BIPM (국제도량형국) SI 미터 정의  
-  https://www.bipm.org/en/measurement-units/si-definitions/meter
+- 국제도량형국(BIPM) SI 기본단위: 미터(m)  
+  https://www.bipm.org/en/si-base-units/metre
 
 ---
 
