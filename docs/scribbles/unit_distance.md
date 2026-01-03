@@ -1,5 +1,176 @@
 # Units – Distance and Scale Domains
 
+Shardhana considers how to define and connect **distance**
+between different physical worlds,
+ranging from the atomic scale to the cosmic scale.
+
+This document is not a simple unit conversion table.
+It records the design philosophy of Shardhana regarding
+**the separation and connection of scale domains**.
+
+---
+
+## 0. Distinction Between Length and Distance
+
+In Shardhana, **length** and **distance** are treated as distinct concepts.
+
+### Length
+- An intrinsic geometric property of an object or element
+- A value attached to the object itself
+- Examples:
+  - Element length
+  - Member length
+  - Crack length
+- Primary usage:
+  - Geometry definition
+  - Element properties
+  - Reference for stiffness calculation
+
+### Distance
+- The separation between two positions
+- A relational value defined by positions
+- May change depending on state or deformation
+- Examples:
+  - Distance between two nodes
+  - Distance before and after deformation
+  - Distance between planets or stars
+
+**This document focuses on distance, not length.**  
+It defines the separation between different worlds and scales,
+rather than the size of objects.
+
+---
+
+## 1. Concept of Scale Domains
+
+Shardhana does not enforce a single distance unit for all analyses.
+Instead, it defines meaningful **scale domains** for different physical worlds.
+
+Each scale domain has:
+- A representative distance unit intuitive to humans
+- An approximate conversion to meters (m)
+- Explicit conversion rules when connecting to other domains
+
+---
+
+## 2. Distance Definition by Scale Domain
+
+### (1) Atomic / Microscopic Scale
+- Representative units: Å, nm
+- Approximate distances:
+  - 1 Å ≈ 1.0 × 10⁻¹⁰ m  
+  - 1 nm ≈ 1.0 × 10⁻⁹ m
+- Meaning:
+  - Material microstructure
+  - Theoretical background of fracture mechanisms
+
+---
+
+### (2) Mechanical / Component Scale
+- Representative unit: mm
+- Approximate distance:
+  - 1 mm = 1.0 × 10⁻³ m
+- Meaning:
+  - Cross-sections
+  - Connections and local behavior
+  - Structural details
+
+---
+
+### (3) Architectural / Structural Scale  
+**(Base Domain of Shardhana)**
+- Representative unit: m
+- Approximate distance:
+  - 1 m = 1.0 × 10⁰ m
+- Meaning:
+  - Buildings
+  - Structural systems
+  - AEM-based structural analysis
+- **Shardhana starts from this scale**
+
+---
+
+### (4) Civil / Geotechnical / Urban Scale
+- Representative units: m, km
+- Approximate distance:
+  - 1 km = 1.0 × 10³ m
+- Meaning:
+  - Bridges, tunnels
+  - Ground and site-scale structures
+
+---
+
+### (5) Solar System Scale
+- Representative unit: AU (Astronomical Unit)
+- Approximate distance:
+  - 1 AU ≈ 1.496 × 10¹¹ m
+- Meaning:
+  - Planetary orbits
+  - Solar system dynamics
+
+---
+
+### (6) Stellar / Galactic Scale
+- Representative units: light-year (ly), parsec
+- Approximate distances:
+  - 1 light-year ≈ 9.46 × 10¹⁵ m
+  - 1 parsec ≈ 3.09 × 10¹⁶ m
+- Meaning:
+  - Interstellar distances
+  - Galactic structures
+
+---
+
+## 3. Principles for Connecting Scale Domains
+
+- Different scale domains are never mixed implicitly
+- Transition between domains always requires **explicit distance conversion**
+- Distance conversion is treated as a semantic transition,
+  not merely a numerical operation
+
+---
+
+## Supplement: Definition of 1 Meter in the SI System
+
+In the modern SI system, one meter (m) is not defined by a physical object,
+but by a fundamental constant of nature.
+
+- One meter is defined as  
+  **the distance traveled by light in vacuum during
+  1 / 299,792,458 of a second.**
+
+Thus, the meter is:
+- Not a measuring tool
+- A distance fixed by time and the speed of light
+- A universally agreed reference for distance
+
+Reference:
+- BIPM – SI definition of the meter  
+  https://www.bipm.org/en/measurement-units/si-definitions/meter
+
+---
+
+## 4. Declaration of Shardhana
+
+- Shardhana v0.x adopts the
+  **architectural / structural scale (meter)** as its base domain
+- The internal reference distance unit is **meter (m)**
+- Other scale domains are conceptually open,
+  but not directly connected in early implementations
+
+---
+
+## Notes
+- Distance connects worlds
+- Length will be treated separately in geometry and element documents
+- This document serves as the distance worldview declaration of Shardhana
+
+---
+
+---
+
+# 단위 – 거리와 스케일 도메인
+
 Shardhana는  
 원자 수준부터 우주 스케일까지,  
 서로 다른 물리 세계 사이의 **거리(distance)** 를 어떻게 정의하고  
@@ -23,7 +194,7 @@ Shardhana에서는 **Length(길이)** 와 **Distance(거리)** 를
   - 부재 길이
   - 요소 길이
   - 균열 길이
-- 주 용도:
+- 주요 용도:
   - 요소 정의
   - 기하 속성
   - 강성 계산의 기준
