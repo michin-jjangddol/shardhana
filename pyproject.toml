@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shardhana"
+version = "0.0.1"
+description = "Shardhana structural analysis core (experimental)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Lee Seok" }]
+license = { text = "MIT" }
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
