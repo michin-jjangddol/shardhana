@@ -60,3 +60,9 @@ See the [`LICENSE`](./LICENSE) file for the full license text.
 
 [michin-jjangddol](https://github.com/michin-jjangddol)
 
+
+## Quick Start
+
+```bash
+pip install shardhana
+python -m shardhana
