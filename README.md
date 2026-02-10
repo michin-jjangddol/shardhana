@@ -90,6 +90,9 @@ See the [`LICENSE`](./LICENSE) file for the full license text.
 ```bash
 pip install shardhana
 python -m shardhana
+```
+
+---
 
 
 > This document was written with the assistance of Shana (GPT).
