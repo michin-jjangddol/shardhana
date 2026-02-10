@@ -30,7 +30,8 @@ HEM 코어가 현실 세상을 어떻게 컴퓨터 시뮬레이션 속에 담아
 
 ## 🎯 Purpose
 
-- **Make AEM accessible** to a global engineering community  
+- **Build accessible FEM and AEM foundations toward HEM**
+  for a global engineering community  
 - **Encourage open collaboration** in structural analysis software development  
 - **Bridge academic research and real-world engineering**  
 - **Foster innovation** through shared knowledge and tools  
