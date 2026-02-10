@@ -5,6 +5,29 @@ Launched on **August 15, 2025 — the 80th Korean Liberation Day**, this project
 
 ---
 
+## 🎯 Method
+
+Shardhana ultimately aims to become an open-source platform  
+driven by the HEM (Han Element Method) core, beyond FEM and AEM.
+
+Here, “Han” carries layered meanings:
+it represents “one” — the unity behind Shardhana —
+as well as “Han” (恨), the condensed accumulation of human intent, experience, and inner tension.
+
+Curious how the HEM core will bring the real world into computer simulation? ^^
+
+---
+
+샤드하나는 궁극적으로 FEM과 AEM을 넘어  
+HEM(Han Element Method) 코어로 실행되는 오픈 소스 플랫폼을 지향합니다.
+
+여기서 ‘한(Han)’은  
+이 프로젝트 샤드하나의 ‘하나(one)’라는 의미와,  
+사람의 마음속에 응축된 덩어리인 ‘한(恨)’의 의미를 함께 담고 있습니다.
+
+HEM 코어가 현실 세상을 어떻게 컴퓨터 시뮬레이션 속에 담아낼지,  
+궁금하지 않으신가요? ^^
+
 ## 🎯 Purpose
 
 - **Make AEM accessible** to a global engineering community  
@@ -66,3 +89,7 @@ See the [`LICENSE`](./LICENSE) file for the full license text.
 ```bash
 pip install shardhana
 python -m shardhana
+
+
+> This document was written with the assistance of Shana (GPT).
+> 이 문서는 샤나(GPT)의 도움으로 작성된 문서입니다.
