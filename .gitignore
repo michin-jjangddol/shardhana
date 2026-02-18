@@ -73,3 +73,6 @@ Thumbs.db
 test_plot.png
 
 !.vscode/settings.json
+
+# pytest 캐시 파일
+.pytest_cache/
