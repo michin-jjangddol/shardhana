@@ -36,7 +36,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
       background: rgba(255, 255, 255, 0.85);
@@ -54,9 +54,17 @@
     }
 
     /* 섹션별 색상 다르게 */
-    section:nth-child(1) h2 { color: #00796b; } /* 청록 */
-    section:nth-child(2) h2 { color: #8e24aa; } /* 보라 */
-    section:nth-child(3) h2 { color: #ef6c00; } /* 오렌지 */
+      section:nth-child(1) h2 { color: #00796b; }  /* 청록 */
+      section:nth-child(2) h2 { color: #7b2cbf; }  /* 선명 보라 */
+      section:nth-child(3) h2 { color: #f77f00; }  /* 따뜻한 오렌지 */
+      section:nth-child(4) h2 { color: #1565c0; }  /* 딥 블루 */
+      section:nth-child(5) h2 { color: #c2185b; }  /* 로즈 레드 */
+
+      section:nth-child(6) h2 { color: #00796b; }  /* 청록 */
+      section:nth-child(7) h2 { color: #7b2cbf; }  /* 선명 보라 */
+      section:nth-child(8) h2 { color: #f77f00; }  /* 따뜻한 오렌지 */
+      section:nth-child(9) h2 { color: #1565c0; }  /* 딥 블루 */
+      section:nth-child(10) h2 { color: #c2185b; }  /* 로즈 레드 */
 
     footer {
       background: #004d40;
@@ -82,45 +90,162 @@
 <body>
   <header>
     <h1>Shardhana Project</h1>
-    <p>Open-source exploration of the Applied Element Method (AEM)</p>
+    <p>Open-source structural simulation: from Classical Hand Calculations toward HEM (Han Element Method)</p>
   </header>
 
   <main>
     <section>
-      <h2>About the Project</h2>
+      <h2>The Beginning of the Project</h2>
       <p>
-        Shardhana is an open-source initiative aimed at developing a computational 
-        framework for structural analysis based on the <strong>Applied Element Method (AEM)</strong>.
-        Unlike traditional finite element methods, AEM provides a more natural way to simulate 
-        structural behavior, including failure mechanisms, collapse analysis, and progressive damage.
+        Shardhana began with the goal of implementing the <strong>Applied Element Method (AEM)</strong> as an open-source project.
+      </p>
+      <p>
+        While the traditional <strong>Finite Element Method (FEM)</strong> has certain limitations in naturally representing post-failure behavior,
+        <strong>AEM</strong> drew attention for its ability to simulate more intuitive collapse behavior through element separation and re-contact.
+      </p>
+      <p>
+        The project was initiated with the intention of directly implementing the core principles of structural analysis and sharing them openly,
+        without relying on proprietary software.
       </p>
     </section>
 
     <section>
-      <h2>Our Vision</h2>
+      <h2>Expansion of Direction</h2>
       <p>
-        The vision of Shardhana is to create a free, collaborative platform where engineers, researchers, 
-        and students can explore advanced analysis techniques. We believe that structural simulation 
-        tools should be both <em>scientifically rigorous</em> and <em>accessible to everyone</em>.
+        In striving to overcome the limitations of FEM, we came to recognize that AEM may also entail fundamental limitations.
       </p>
       <ul>
-        <li>Implement AEM fundamentals in a transparent, open way</li>
-        <li>Encourage community contributions and shared learning</li>
-        <li>Support both research and educational applications</li>
+        <li>What is an element?</li>
+        <li>Is failure a discontinuity, or a transformation of state?</li>
+        <li>Is structural behavior the result of matrix operations, or a continuous process of change?</li>
       </ul>
+      <p>
+        These questions became the catalyst for expanding the direction of the project.
+      </p>
+    </section>
+
+    <section>
+      <h2>Transition Toward HEM</h2>
+      <p>
+        <strong>Shardhana</strong> began by pursuing AEM beyond FEM, and along the way, it evolved toward a new conceptual analysis core: <strong>HEM</strong>.
+      </p>
+      <p>
+        <strong>HEM</strong> interprets an element not merely as a stiffness block, but as a seed-like state unit composed of a Core and a Face.
+      </p>
+      <p>
+        Core represents the intrinsic material and energy state,
+        while Face represents the boundary through which interaction occurs.
+      </p>
+      <p>
+        Failure is no longer interpreted as simple “breakage,” but as the reconfiguration and differentiation of states.
+        Collapse is not discontinuity, but part of transformation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Goals of Shardhana</h2>
+      <p>
+        Shardhana aims to:
+      </p>
+      <ul>
+         <li>Implement an open-source structural analysis core</li>
+         <li>Organize and interpret fundamental FEM theory</li>
+         <li>Explore AEM analytical concepts</li>
+         <li>Establish HEM as a new analytical methodology</li>
+         <li>Develop simulations that approach natural phenomena more closely</li>
+      </ul>
+      <p>
+         <em><strong>Nature is the teacher of Shardhana.</strong></em>
+      </p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
       <p>
-        Shardhana is hosted on GitHub, where you can browse the code, report issues, 
-        or contribute improvements. Whether you are an experienced developer, a researcher, 
-        or a student eager to learn, your participation is welcome.
+       Shardhana is an open-source structural analysis project.<br>
+       You can review the code, submit issues, and contribute improvements.<br>
+       We welcome participation from anyone who is interested.
       </p>
       <p>
         👉 Visit us on <a href="https://github.com/michin-jjangddol/shardhana">GitHub</a>
       </p>
     </section>
+
+    <section>
+      <h2>프로젝트의 시작</h2>
+      <p>
+         샤드하나는 처음 <strong>AEM(응용요소법)</strong>을 오픈소스로 구현해 보자는 목표에서 출발했습니다.
+      </p>
+      <p>
+         기존 <strong>FEM(유한요소법)</strong>이 파괴 이후 거동을 자연스럽게 표현하는 데 일정한 한계가 있다면,
+         <strong>AEM</strong>은 요소의 분리와 재접촉을 통해 보다 직관적인 붕괴 거동을 모사할 수 있다는 점에 주목했습니다.
+      </p>
+      <p>
+         이 프로젝트는 상용 프로그램에 의존하지 않고, 구조해석의 핵심 원리를 직접 구현하고 공개적으로 공유하는 것을 목표로 시작되었습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>방향의 확장</h2>
+      <p>
+        FEM의 한계를 극복하려는 고민 속에서, AEM 역시 근본적인 문제를 내포하고 있을 가능성을 인식하게 되었습니다.
+      </p>
+      <ul>
+        <li>요소란 무엇인가?  </li>
+        <li>파괴는 단절인가, 아니면 상태 변화인가?  </li>
+        <li>구조 거동은 행렬 연산의 결과인가, 아니면 연속적인 변화 과정인가?</li>
+      </ul>
+      <p>
+        이 질문들은 프로젝트의 방향을 확장시키는 계기가 되었습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>HEM으로의 전환</h2>
+      <p>
+        <strong>Shardhana</strong>는 FEM을 넘어 AEM을 추구하며 출발했지만, 그 여정 속에서 <strong>HEM</strong>이라는 새로운 개념적 해석 코어에 이르게 되었습니다.
+      </p>
+      <p>
+        <strong>HEM</strong>은 요소를 단순한 강성 블록이 아니라 중심부(Core)와 형태(Face)를 가진 씨앗 구조와 같은 하나의 상태 단위로 바라봅니다.
+      </p>
+      <p>
+        중심부는 본질적인 물성 및 에너지 상태를 의미하며, 형태는 외부와 상호작용하는 경계를 의미합니다.
+      </p>
+      <p>
+        파괴는 더 이상 ‘깨짐’이 아니라, 상태의 재구성과 분화로 해석됩니다.  
+        즉, 붕괴는 단절이 아니라 변화의 한 과정입니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>샤드하나의 목표</h2>
+      <p>
+        샤드하나는 다음을 지향합니다.
+      </p>
+      <ul>
+         <li>구조해석 코어를 오픈소스로 구현</li>
+         <li>FEM 기본 이론의 정리 및 해석</li>
+         <li>AEM 해석 개념의 탐색</li>
+         <li>HEM이라는 새로운 해석 방법의 정립 </li>
+         <li>자연현상에 보다 가까이 다가가는 시뮬레이션 구현 </li>
+      </ul>
+      <p>
+         <em><strong>샤드하나는 자연이 스승입니다.</strong></em>
+      </p>
+    </section>
+
+    <section>
+      <h2>초대</h2>
+      <p>
+       Shardhana는 오픈소스로 개발되는 구조해석 프로젝트입니다.<br>
+       코드를 검토하고, 이슈를 제안하며, 개선에 참여하실 수 있습니다.<br>
+       관심 있는 모든 분들의 참여를 환영합니다.
+      </p>
+      <p>
+        👉 Visit us on <a href="https://github.com/michin-jjangddol/shardhana">GitHub</a>
+      </p>
+    </section>
+
   </main>
 
   <footer>
