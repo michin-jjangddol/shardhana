@@ -202,6 +202,11 @@ but a process in which existence itself evolves according to state.
 
 > This document was prepared with the assistance of Shana (GPT).
 
+<br>
+<br>
+
+
+
 # FEM과 HEM에서의 힘 정의 차이에 대한 정리
 
 ## 1. 문제의식
@@ -397,9 +402,6 @@ Seed는 더 작은 Seed로 자동 분할된다.
 이 과정은 단순한 메쉬 세분화가 아니라,
 
 상태에 의해 존재가 분화되는 과정으로 정의된다.
-
----
-
 
 ---
 
