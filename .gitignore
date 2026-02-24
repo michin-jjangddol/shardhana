@@ -76,3 +76,6 @@ test_plot.png
 
 # pytest 캐시 파일
 .pytest_cache/
+
+# 쥬피터
+notebooks/test.ipynb
