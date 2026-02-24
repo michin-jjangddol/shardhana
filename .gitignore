@@ -78,4 +78,4 @@ test_plot.png
 .pytest_cache/
 
 # 쥬피터
-notebooks/test.ipynb
+notebooks
