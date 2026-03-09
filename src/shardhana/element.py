@@ -15,6 +15,7 @@ Relations : Dynamic relationship between neighboring elements
 """
 
 from .node import Node
+from .state import State
 
 
 class Seed:
@@ -39,22 +40,6 @@ class Space:
         self.density = density
         self.volume = volume
         self.shape = shape
-
-
-class State:
-    """
-    Time-dependent state variables
-    """
-
-    def __init__(self):
-
-        self.pressure = 0.0
-        self.temperature = 0.0
-
-        self.velocity = 0.0
-        self.acceleration = 0.0
-
-        self.moisture = 0.0
 
 
 class Relation:
