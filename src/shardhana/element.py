@@ -15,6 +15,7 @@ Relations : Dynamic relationship between neighboring elements
 """
 
 from .node import Node
+from .material import Material
 from .state import State
 
 
@@ -23,10 +24,10 @@ class Seed:
     Structural core of the element
     """
 
-    def __init__(self, density=0.0, volume=0.0, shape=None):
+    def __init__(self, shape=None):
 
-        self.density = density
-        self.volume = volume
+        self.material = Material()
+        self.volume = 0.0
         self.shape = shape
 
 
