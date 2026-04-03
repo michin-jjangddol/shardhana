@@ -1,0 +1,15 @@
+목적:
+Shardhana 패키지에 version.py 파일 추가
+
+대상:
+src/shardhana/version.py
+src/shardhana/__init__.py
+
+조건:
+- 가장 단순한 구조로 시작
+- __version__ 문자열 한 곳에서 관리
+- 나중에 패키지 전체에서 import 가능해야 함
+
+출력 형태:
+- 바로 붙여넣을 수 있는 Python 코드
+- 파일별 코드 구분해서 제시

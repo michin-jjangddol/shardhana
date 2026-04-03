@@ -1,5 +1,7 @@
-__version__ = "0.0.1.post3"
 
+from .version import __version__
+
+__all__ = ["__version__", "hello"]
 
 def hello():
     print("hello shardhana !!!")
