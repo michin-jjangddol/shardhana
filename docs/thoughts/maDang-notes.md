@@ -251,5 +251,3 @@ maDang is a real-world example of HEM concepts found in nature:
 -----
 
 > 이 문서는 샤나(GPT)와 로드 Laude(Claude)의 도움으로 작성되었습니다.
-
-제목은 한국 마당이 아니라 .. 호기심 유발로 그냥 마당 - hem - note로 합시다 .. 영문 번역 로드한테 시키면 되겠지?
