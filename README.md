@@ -55,6 +55,15 @@ Shardhana는 그 첫걸음을 내딛습니다.
 
 ---
 
+## 🧭 Development Direction
+
+Shardhana is built on a **Local-first, Cloud-optional** architecture.
+
+For detailed design principles, see:
+👉 [Shardhana Development Vision](docs/shardhana-vision.md)
+
+---
+
 ## 🌟 Project Goals
 
 1. **Develop a core AEM engine** capable of realistic structural simulation under various loads and failure scenarios  
