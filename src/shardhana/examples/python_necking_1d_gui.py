@@ -9,6 +9,12 @@ Uses tkinter + matplotlib embedded in GUI.
 v2: Each seed now carries geometric properties (length, area, volume)
     and contact-face values (face_left, face_right).
     State change → geometry update → contact-face update.
+
+v3: Fracture logic added.
+    - face < face_threshold → broken = True
+    - Broken seeds excluded from neighbor interaction
+    - Adjacent seeds' faces unchanged (no auto-cascade)
+    - Broken seeds shown as red X in contact face plot
 """
 
 import tkinter as tk
@@ -27,13 +33,17 @@ class Seed:
     Contact faces: left / right (1D simplification of face set)
 
     Fields:
-        state      — scalar state value (e.g. damage, strain)
-        length     — seed length (deforms with state)
-        area       — cross-sectional area (default: 1.0)
-        volume     — length * area (updated automatically)
-        face_left  — contact area on left face
-        face_right — contact area on right face
+        state          — scalar state value (e.g. damage, strain)
+        length         — seed length (deforms with state)
+        area           — cross-sectional area (default: 1.0)
+        volume         — length * area (updated automatically)
+        face_left      — contact area on left face
+        face_right     — contact area on right face
+        broken         — True if fracture condition is met
+        face_threshold — face area below which fracture triggers
     """
+
+    FACE_THRESHOLD = 0.2  # fixed fracture threshold
 
     def __init__(self, length=1.0, area=1.0):
         self.state      = 0.0
@@ -42,18 +52,19 @@ class Seed:
         self.volume     = length * area
         self.face_left  = area   # default: full contact
         self.face_right = area
+        self.broken     = False  # fracture flag
 
     def update_geometry(self, state_diff, geo_k=0.1):
         """
         Update geometry based on state change.
-
-        - length grows slightly when state increases (localization → elongation)
-        - volume follows from length * area
-        - contact-face area reduces when state gap is large (damage proxy)
+        If already broken, skip geometry update (frozen state).
 
         state_diff: abs difference between this seed and neighbor avg
         geo_k:      geometry sensitivity (keep small)
         """
+        if self.broken:
+            return  # broken seeds are frozen
+
         # Length change: state increase → slight elongation
         self.length = max(0.01, self.length + geo_k * self.state)
 
@@ -65,20 +76,29 @@ class Seed:
         self.face_left  = self.area * damage_factor
         self.face_right = self.area * damage_factor
 
+        # ── Fracture check ──────────────────────────────────
+        # If either face drops below threshold → fracture
+        if self.face_left < self.FACE_THRESHOLD or \
+           self.face_right < self.FACE_THRESHOLD:
+            self.broken = True
+
 
 # ── HEM Simulation ───────────────────────────────────────────
 
 def run_hem(N, dt, k, steps):
     """
-    Run 1D HEM simulation with geometry.
+    Run 1D HEM simulation with geometry + fracture.
+
     Returns:
         state_history   — list of state snapshots per step
         volume_history  — list of volume snapshots per step
         face_history    — list of face_right snapshots per step
+        broken_history  — list of broken-flag snapshots per step
+        fracture_step   — step index when first fracture occurred (or None)
     """
     # Initialize seeds
     seeds = [Seed(length=1.0, area=1.0) for _ in range(N)]
-    seeds[N // 2].state = 0.1  # Seed: small perturbation at center
+    seeds[N // 2].state = 0.1  # perturbation at center
 
     def snapshot(attr):
         return [getattr(s, attr) for s in seeds]
@@ -86,33 +106,55 @@ def run_hem(N, dt, k, steps):
     state_history  = [snapshot("state")]
     volume_history = [snapshot("volume")]
     face_history   = [snapshot("face_right")]
+    broken_history = [snapshot("broken")]
 
-    for _ in range(steps):
-        new_states = [s.state for s in seeds]  # copy current states
+    fracture_step = None  # track when first fracture happens
+
+    for step in range(steps):
+        new_states = [s.state for s in seeds]  # copy
 
         for i in range(1, N - 1):
-            neighbor_avg = (seeds[i - 1].state + seeds[i + 1].state) / 2.0
+            # ── Skip broken seeds entirely ──────────────────
+            if seeds[i].broken:
+                continue
+
+            # Build neighbor average, also skip broken neighbors
+            left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
+            right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
+            neighbor_avg = (left_state + right_state) / 2.0
 
             # Contact-face weighted interaction
-            # face value acts as a conductance between seeds
             face_weight = (seeds[i].face_left + seeds[i].face_right) / (2.0 * seeds[i].area)
-            face_weight = max(0.01, face_weight)  # avoid zero
+            face_weight = max(0.01, face_weight)
 
-            diff = seeds[i].state - neighbor_avg  # HEM: amplify
+            diff = seeds[i].state - neighbor_avg
             new_states[i] = seeds[i].state + dt * k * face_weight * diff
 
-        # Apply new states and update geometry
+        # Apply new states + update geometry
         for i in range(1, N - 1):
+            if seeds[i].broken:
+                continue  # frozen — don't update
+
             seeds[i].state = new_states[i]
-            neighbor_avg = (seeds[i - 1].state + seeds[i + 1].state) / 2.0
+
+            # Neighbor avg for geometry (broken neighbors ignored)
+            left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
+            right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
+            neighbor_avg = (left_state + right_state) / 2.0
+
             state_diff = abs(seeds[i].state - neighbor_avg)
             seeds[i].update_geometry(state_diff)
+
+        # Track first fracture step
+        if fracture_step is None and any(s.broken for s in seeds):
+            fracture_step = step + 1
 
         state_history.append(snapshot("state"))
         volume_history.append(snapshot("volume"))
         face_history.append(snapshot("face_right"))
+        broken_history.append(snapshot("broken"))
 
-    return state_history, volume_history, face_history
+    return state_history, volume_history, face_history, broken_history, fracture_step
 
 
 # ── GUI ──────────────────────────────────────────────────────
@@ -123,7 +165,7 @@ root.configure(bg="#1e1e2e")
 
 # ── Header ───────────────────────────────────────────────────
 tk.Label(
-    root, text="Shardhana · 1D HEM Simulation (v2 — Geometry)",
+    root, text="Shardhana · 1D HEM Simulation (v3 — Fracture)",
     bg="#1e1e2e", fg="#cdd6f4",
     font=("Arial", 14, "bold"), pady=10
 ).pack()
@@ -165,7 +207,7 @@ tk.Label(root, textvariable=status_var,
          bg="#1e1e2e", fg="#a6e3a1",
          font=("Arial", 10), pady=4).pack()
 
-# ── Plot Helper ──────────────────────────────────────────────
+# ── Plot Helper (state / volume) ─────────────────────────────
 def plot_panel(ax, history, steps, title, color_final, ylabel):
     step_mid = steps // 2
     x = list(range(len(history[0])))
@@ -186,6 +228,43 @@ def plot_panel(ax, history, steps, title, color_final, ylabel):
     ax.legend(facecolor="#313244", labelcolor="#cdd6f4", fontsize=8)
     ax.grid(True, color="#313244", linestyle="--", linewidth=0.5)
 
+# ── Contact Face Plot (with threshold line + broken markers) ─
+def plot_face_panel(ax, face_history, broken_history, steps):
+    step_mid = steps // 2
+    x = list(range(len(face_history[0])))
+
+    ax.clear()
+    ax.set_facecolor("#181825")
+
+    # Plot face curves
+    ax.plot(x, face_history[0],        color="#89b4fa", linewidth=1.5,
+            marker="o", markersize=3, label="Step 0")
+    ax.plot(x, face_history[step_mid], color="#fab387", linewidth=1.5,
+            marker="o", markersize=3, label=f"Step {step_mid}")
+    ax.plot(x, face_history[steps],    color="#a6e3a1", linewidth=2.0,
+            marker="o", markersize=4, label=f"Step {steps}")
+
+    # Threshold line
+    ax.axhline(y=Seed.FACE_THRESHOLD, color="#f38ba8", linewidth=1.2,
+               linestyle="--", label=f"threshold={Seed.FACE_THRESHOLD}")
+
+    # Mark broken seeds at final step with red X
+    final_broken = broken_history[steps]
+    final_face   = face_history[steps]
+    broken_x     = [i for i, b in enumerate(final_broken) if b]
+    broken_y     = [final_face[i] for i in broken_x]
+    if broken_x:
+        ax.scatter(broken_x, broken_y, color="#f38ba8", marker="x",
+                   s=80, linewidths=2, zorder=5, label="Broken")
+
+    ax.set_title("Contact Face (right) + Fracture", color="#cdd6f4", fontsize=10)
+    ax.set_xlabel("Element Index", color="#a6adc8")
+    ax.set_ylabel("Face Area", color="#a6adc8")
+    ax.tick_params(colors="#a6adc8")
+    ax.spines[:].set_color("#45475a")
+    ax.legend(facecolor="#313244", labelcolor="#cdd6f4", fontsize=8)
+    ax.grid(True, color="#313244", linestyle="--", linewidth=0.5)
+
 # ── Run ──────────────────────────────────────────────────────
 def on_run():
     try:
@@ -197,23 +276,30 @@ def on_run():
         status_var.set("⚠ Invalid input. Please check parameters.")
         return
 
-    state_h, vol_h, face_h = run_hem(N, dt, k, steps)
+    state_h, vol_h, face_h, broken_h, fracture_step = run_hem(N, dt, k, steps)
 
     plot_panel(ax_state, state_h, steps,
                "State (Localization)", "#f38ba8", "State Value")
     plot_panel(ax_vol,   vol_h,   steps,
                "Volume Change",        "#cba6f7", "Volume")
-    plot_panel(ax_face,  face_h,  steps,
-               "Contact Face (right)", "#a6e3a1", "Face Area")
+    plot_face_panel(ax_face, face_h, broken_h, steps)
 
     fig.tight_layout()
     canvas.draw()
+
+    # Count broken seeds at final step
+    broken_count = sum(broken_h[steps])
+    broken_ids   = [i for i, b in enumerate(broken_h[steps]) if b]
+
+    frac_info = (f"First fracture @ step {fracture_step}"
+                 if fracture_step else "No fracture")
 
     status_var.set(
         f"✔ Done — N={N}, dt={dt}, k={k}, steps={steps}  |  "
         f"Center: state={state_h[-1][N//2]:.4f}  "
         f"vol={vol_h[-1][N//2]:.4f}  "
-        f"face={face_h[-1][N//2]:.4f}"
+        f"face={face_h[-1][N//2]:.4f}  |  "
+        f"{frac_info}  |  Broken seeds: {broken_count} {broken_ids}"
     )
 
 tk.Button(
