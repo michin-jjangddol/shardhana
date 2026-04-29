@@ -6,20 +6,17 @@ Rule-based localization visualization.
 No FEM, no stiffness matrix.
 Uses tkinter + matplotlib embedded in GUI.
 
-v2: Each seed now carries geometric properties (length, area, volume)
-    and contact-face values (face_left, face_right).
-    State change → geometry update → contact-face update.
-
-v3: Fracture logic added.
-    - face < face_threshold → broken = True
-    - Broken seeds excluded from neighbor interaction
-    - Adjacent seeds' faces unchanged (no auto-cascade)
-    - Broken seeds shown as red X in contact face plot
-
-v3a: Post-fracture neighbor face fix.
-    - If neighbor is broken → that side's face is frozen (not updated)
-    - Damage does NOT propagate through a broken interface
-    - fracture → interaction cutoff → no further damage propagation
+v2:  Seed geometry (length, area, volume, face_left, face_right)
+v3:  Seed-level fracture (broken flag per seed)
+v3a: Neighbor face freeze on broken seed
+v3b: Interface fracture model (binary fractured flag)
+v3c: Continuous interface stiffness model.
+     Fracture is NOT a boolean event.
+     It is a process: Contact → Damage → Opening → Space
+     - interface.k replaces interface.fractured
+     - k = f(face_right) → decreases as face degrades
+     - interaction weighted by k, never fully blocked
+     - visualization: k value shown as color intensity
 """
 
 import tkinter as tk
@@ -27,6 +24,12 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+# ── Constants ─────────────────────────────────────────────────
+K_CONTACT = 1.0    # full contact stiffness
+K_SPACE   = 1e-6   # near-zero (air / open crack)
+K_VIZ_THRESHOLD = 0.2  # visualization only: mark interface when k < this
 
 # ── Seed ─────────────────────────────────────────────────────
 
@@ -34,147 +37,151 @@ class Seed:
     """
     Represents a single element in the 1D HEM model.
 
-    Geometry concept: cuboid-like (expandable toward 2D/3D)
-    Contact faces: left / right (1D simplification of face set)
-
     Fields:
-        state          — scalar state value (e.g. damage, strain)
-        length         — seed length (deforms with state)
-        area           — cross-sectional area (default: 1.0)
-        volume         — length * area (updated automatically)
-        face_left      — contact area on left face
-        face_right     — contact area on right face
-        broken         — True if fracture condition is met
-        FACE_THRESHOLD — face area below which fracture triggers (class constant)
+        state      — scalar state value
+        length     — seed length
+        area       — cross-sectional area
+        volume     — length * area
+        face_left  — contact area on left face
+        face_right — contact area on right face
     """
-
-    FACE_THRESHOLD = 0.2  # fixed fracture threshold
 
     def __init__(self, length=1.0, area=1.0):
         self.state      = 0.0
         self.length     = length
         self.area       = area
         self.volume     = length * area
-        self.face_left  = area   # default: full contact
+        self.face_left  = area
         self.face_right = area
-        self.broken     = False  # fracture flag
 
-    def update_geometry(self, state_diff, left_broken=False, right_broken=False, geo_k=0.1):
+    def update_geometry(self, state_diff, geo_k=0.1):
         """
         Update geometry based on state change.
-        If already broken, skip entirely (frozen state).
-
-        state_diff:   abs difference between this seed and neighbor avg
-        left_broken:  True if left neighbor is broken
-        right_broken: True if right neighbor is broken
-        geo_k:        geometry sensitivity (keep small)
-
-        v3a rule:
-            If neighbor is broken → that side's face is NOT updated (frozen).
-            Damage must not propagate through a broken interface.
+        Face reduction is continuous — no binary freeze.
         """
-        if self.broken:
-            return  # broken seeds are fully frozen
-
-        # Length change: state increase → slight elongation
         self.length = max(0.01, self.length + geo_k * self.state)
-
-        # Volume follows geometry
         self.volume = self.length * self.area
 
-        # Contact face degrades with increasing state gap
         damage_factor = max(0.0, 1.0 - state_diff)
+        self.face_left  = self.area * damage_factor
+        self.face_right = self.area * damage_factor
 
-        # ── v3a: only update face if that neighbor is NOT broken ──
-        if not left_broken:
-            self.face_left  = self.area * damage_factor
 
-        if not right_broken:
-            self.face_right = self.area * damage_factor
+# ── Interface ─────────────────────────────────────────────────
 
-        # ── Fracture check ────────────────────────────────────────
-        # Trigger on the faces that are still active (not frozen)
-        if self.face_left < self.FACE_THRESHOLD or \
-           self.face_right < self.FACE_THRESHOLD:
-            self.broken = True
+class Interface:
+    """
+    Represents the contact between seed[i] and seed[i+1].
+
+    v3c: Replaces binary fractured flag with continuous stiffness k.
+
+    k evolves with face degradation:
+        k = K_CONTACT  → full contact
+        k → K_SPACE    → near-open crack / space
+
+    Fracture is a process, not an event.
+    """
+
+    def __init__(self):
+        self.k = K_CONTACT  # start fully connected
+
+    def update(self, face_right_i, area):
+        """
+        Update k based on face_right of seed[i].
+        k tracks face degradation smoothly.
+        Never drops below K_SPACE.
+        """
+        normalized = face_right_i / area  # 0.0 ~ 1.0
+        self.k = max(K_SPACE, normalized * K_CONTACT)
+
+    @property
+    def is_weak(self):
+        """Visualization helper: True when k drops below threshold."""
+        return self.k < K_VIZ_THRESHOLD
 
 
 # ── HEM Simulation ───────────────────────────────────────────
 
-def run_hem(N, dt, k, steps):
+def run_hem(N, dt, k_amp, steps):
     """
-    Run 1D HEM simulation with geometry + fracture (v3a).
+    Run 1D HEM simulation with continuous interface stiffness (v3c).
+
+    Args:
+        k_amp: amplification factor (GUI input 'k')
 
     Returns:
-        state_history   — list of state snapshots per step
-        volume_history  — list of volume snapshots per step
-        face_history    — list of face_right snapshots per step
-        broken_history  — list of broken-flag snapshots per step
-        fracture_step   — step index when first fracture occurred (or None)
+        state_history     — state snapshots per step
+        volume_history    — volume snapshots per step
+        face_history      — face_right snapshots per step
+        ifc_k_history     — interface k snapshots per step (length N-1)
     """
-    # Initialize seeds
-    seeds = [Seed(length=1.0, area=1.0) for _ in range(N)]
+    seeds      = [Seed(length=1.0, area=1.0) for _ in range(N)]
+    interfaces = [Interface() for _ in range(N - 1)]
+
     seeds[N // 2].state = 0.1  # perturbation at center
 
-    def snapshot(attr):
+    def snap_seeds(attr):
         return [getattr(s, attr) for s in seeds]
 
-    state_history  = [snapshot("state")]
-    volume_history = [snapshot("volume")]
-    face_history   = [snapshot("face_right")]
-    broken_history = [snapshot("broken")]
+    def snap_ifc_k():
+        return [ifc.k for ifc in interfaces]
 
-    fracture_step = None
+    state_history  = [snap_seeds("state")]
+    volume_history = [snap_seeds("volume")]
+    face_history   = [snap_seeds("face_right")]
+    ifc_k_history  = [snap_ifc_k()]
 
     for step in range(steps):
-        new_states = [s.state for s in seeds]  # copy
+        new_states = [s.state for s in seeds]
 
+        # ── Interaction step ─────────────────────────────────
         for i in range(1, N - 1):
-            # Skip broken seeds
-            if seeds[i].broken:
-                continue
+            k_left  = interfaces[i - 1].k  # stiffness from left
+            k_right = interfaces[i].k       # stiffness from right
 
-            # Broken neighbor → treat as neutral (use own state)
-            left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
-            right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
-            neighbor_avg = (left_state + right_state) / 2.0
+            total_k = k_left + k_right
+            if total_k < K_SPACE * 2:
+                continue  # effectively isolated
 
-            # Contact-face weighted interaction
-            face_weight = (seeds[i].face_left + seeds[i].face_right) / (2.0 * seeds[i].area)
-            face_weight = max(0.01, face_weight)
+            # Weighted neighbor average by interface stiffness
+            neighbor_avg = (k_left  * seeds[i - 1].state +
+                            k_right * seeds[i + 1].state) / total_k
+
+            # Face weight — how much this seed conducts
+            face_weight = (k_left + k_right) / (2.0 * K_CONTACT)
+            face_weight = max(K_SPACE, face_weight)
 
             diff = seeds[i].state - neighbor_avg
-            new_states[i] = seeds[i].state + dt * k * face_weight * diff
+            new_states[i] = seeds[i].state + dt * k_amp * face_weight * diff
 
-        # Apply new states + update geometry
+        # ── Geometry update step ─────────────────────────────
         for i in range(1, N - 1):
-            if seeds[i].broken:
-                continue
-
             seeds[i].state = new_states[i]
 
-            # Neighbor avg for geometry
-            left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
-            right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
-            neighbor_avg = (left_state + right_state) / 2.0
+            k_left  = interfaces[i - 1].k
+            k_right = interfaces[i].k
+            total_k = k_left + k_right
+
+            if total_k > K_SPACE * 2:
+                neighbor_avg = (k_left  * seeds[i - 1].state +
+                                k_right * seeds[i + 1].state) / total_k
+            else:
+                neighbor_avg = seeds[i].state
 
             state_diff = abs(seeds[i].state - neighbor_avg)
+            seeds[i].update_geometry(state_diff)
 
-            # ── v3a: pass broken flags so face freeze works ───────
-            left_broken  = seeds[i - 1].broken
-            right_broken = seeds[i + 1].broken
-            seeds[i].update_geometry(state_diff, left_broken, right_broken)
+        # ── Interface k update ───────────────────────────────
+        # k follows face_right of seed[i] (left seed of interface)
+        for i in range(N - 1):
+            interfaces[i].update(seeds[i].face_right, seeds[i].area)
 
-        # Track first fracture step
-        if fracture_step is None and any(s.broken for s in seeds):
-            fracture_step = step + 1
+        state_history.append(snap_seeds("state"))
+        volume_history.append(snap_seeds("volume"))
+        face_history.append(snap_seeds("face_right"))
+        ifc_k_history.append(snap_ifc_k())
 
-        state_history.append(snapshot("state"))
-        volume_history.append(snapshot("volume"))
-        face_history.append(snapshot("face_right"))
-        broken_history.append(snapshot("broken"))
-
-    return state_history, volume_history, face_history, broken_history, fracture_step
+    return state_history, volume_history, face_history, ifc_k_history
 
 
 # ── GUI ──────────────────────────────────────────────────────
@@ -183,9 +190,8 @@ root = tk.Tk()
 root.title("Shardhana — 1D HEM Prototype")
 root.configure(bg="#1e1e2e")
 
-# ── Header ───────────────────────────────────────────────────
 tk.Label(
-    root, text="Shardhana · 1D HEM Simulation (v3a — Fracture + Face Freeze)",
+    root, text="Shardhana · 1D HEM Simulation (v3c — Continuous Interface k)",
     bg="#1e1e2e", fg="#cdd6f4",
     font=("Arial", 14, "bold"), pady=10
 ).pack()
@@ -212,7 +218,7 @@ var_dt    = labeled_entry(input_frame, "dt", 1.0)
 var_k     = labeled_entry(input_frame, "k", 0.5)
 var_steps = labeled_entry(input_frame, "Steps", 15)
 
-# ── Plot Area (3 subplots: state / volume / face) ────────────
+# ── Plot Area ────────────────────────────────────────────────
 fig, (ax_state, ax_vol, ax_face) = plt.subplots(1, 3, figsize=(14, 4))
 fig.patch.set_facecolor("#1e1e2e")
 for ax in (ax_state, ax_vol, ax_face):
@@ -221,17 +227,15 @@ for ax in (ax_state, ax_vol, ax_face):
 canvas = FigureCanvasTkAgg(fig, master=root)
 canvas.get_tk_widget().pack(padx=20, pady=(0, 10), fill="both", expand=True)
 
-# ── Status ───────────────────────────────────────────────────
 status_var = tk.StringVar(value="Ready.")
 tk.Label(root, textvariable=status_var,
          bg="#1e1e2e", fg="#a6e3a1",
          font=("Arial", 10), pady=4).pack()
 
-# ── Plot Helper (state / volume) ─────────────────────────────
+# ── Plot Helpers ─────────────────────────────────────────────
 def plot_panel(ax, history, steps, title, color_final, ylabel):
     step_mid = steps // 2
     x = list(range(len(history[0])))
-
     ax.clear()
     ax.set_facecolor("#181825")
     ax.plot(x, history[0],        color="#89b4fa", linewidth=1.5,
@@ -248,37 +252,43 @@ def plot_panel(ax, history, steps, title, color_final, ylabel):
     ax.legend(facecolor="#313244", labelcolor="#cdd6f4", fontsize=8)
     ax.grid(True, color="#313244", linestyle="--", linewidth=0.5)
 
-# ── Contact Face Plot (with threshold line + broken markers) ─
-def plot_face_panel(ax, face_history, broken_history, steps):
+def plot_ifc_panel(ax, ifc_k_history, steps):
+    """
+    Visualize interface stiffness k over element index.
+    - x axis: interface position (i + 0.5)
+    - y axis: k value
+    - color: intensity reflects damage level
+    - dashed line: visualization threshold
+    """
     step_mid = steps // 2
-    x = list(range(len(face_history[0])))
+    N_ifc = len(ifc_k_history[0])
+    x = [i + 0.5 for i in range(N_ifc)]
 
     ax.clear()
     ax.set_facecolor("#181825")
 
-    ax.plot(x, face_history[0],        color="#89b4fa", linewidth=1.5,
+    ax.plot(x, ifc_k_history[0],        color="#89b4fa", linewidth=1.5,
             marker="o", markersize=3, label="Step 0")
-    ax.plot(x, face_history[step_mid], color="#fab387", linewidth=1.5,
+    ax.plot(x, ifc_k_history[step_mid], color="#fab387", linewidth=1.5,
             marker="o", markersize=3, label=f"Step {step_mid}")
-    ax.plot(x, face_history[steps],    color="#a6e3a1", linewidth=2.0,
+    ax.plot(x, ifc_k_history[steps],    color="#a6e3a1", linewidth=2.0,
             marker="o", markersize=4, label=f"Step {steps}")
 
-    # Threshold line
-    ax.axhline(y=Seed.FACE_THRESHOLD, color="#f38ba8", linewidth=1.2,
-               linestyle="--", label=f"threshold={Seed.FACE_THRESHOLD}")
+    # Visualization threshold line
+    ax.axhline(y=K_VIZ_THRESHOLD, color="#f38ba8", linewidth=1.2,
+               linestyle="--", label=f"weak threshold={K_VIZ_THRESHOLD}")
 
-    # Mark broken seeds at final step with red X
-    final_broken = broken_history[steps]
-    final_face   = face_history[steps]
-    broken_x = [i for i, b in enumerate(final_broken) if b]
-    broken_y = [final_face[i] for i in broken_x]
-    if broken_x:
-        ax.scatter(broken_x, broken_y, color="#f38ba8", marker="x",
-                   s=80, linewidths=2, zorder=5, label="Broken")
+    # Mark weak interfaces at final step
+    final_k = ifc_k_history[steps]
+    weak_x = [x[i] for i, kv in enumerate(final_k) if kv < K_VIZ_THRESHOLD]
+    weak_y = [kv     for kv in final_k              if kv < K_VIZ_THRESHOLD]
+    if weak_x:
+        ax.scatter(weak_x, weak_y, color="#f38ba8", marker="x",
+                   s=100, linewidths=2.5, zorder=5, label="Weak interface")
 
-    ax.set_title("Contact Face (right) + Fracture", color="#cdd6f4", fontsize=10)
-    ax.set_xlabel("Element Index", color="#a6adc8")
-    ax.set_ylabel("Face Area", color="#a6adc8")
+    ax.set_title("Interface Stiffness k  (Contact → Space)", color="#cdd6f4", fontsize=10)
+    ax.set_xlabel("Interface Position (between i and i+1)", color="#a6adc8")
+    ax.set_ylabel("k value", color="#a6adc8")
     ax.tick_params(colors="#a6adc8")
     ax.spines[:].set_color("#45475a")
     ax.legend(facecolor="#313244", labelcolor="#cdd6f4", fontsize=8)
@@ -289,34 +299,35 @@ def on_run():
     try:
         N     = int(var_N.get())
         dt    = float(var_dt.get())
-        k     = float(var_k.get())
+        k_amp = float(var_k.get())
         steps = int(var_steps.get())
     except ValueError:
         status_var.set("⚠ Invalid input. Please check parameters.")
         return
 
-    state_h, vol_h, face_h, broken_h, fracture_step = run_hem(N, dt, k, steps)
+    state_h, vol_h, face_h, ifc_k_h = run_hem(N, dt, k_amp, steps)
 
     plot_panel(ax_state, state_h, steps,
                "State (Localization)", "#f38ba8", "State Value")
     plot_panel(ax_vol,   vol_h,   steps,
                "Volume Change",        "#cba6f7", "Volume")
-    plot_face_panel(ax_face, face_h, broken_h, steps)
+    plot_ifc_panel(ax_face, ifc_k_h, steps)
 
     fig.tight_layout()
     canvas.draw()
 
-    broken_count = sum(broken_h[steps])
-    broken_ids   = [i for i, b in enumerate(broken_h[steps]) if b]
-    frac_info    = (f"First fracture @ step {fracture_step}"
-                    if fracture_step else "No fracture")
+    # Find weakest interface at final step
+    final_k   = ifc_k_h[steps]
+    min_k     = min(final_k)
+    min_k_idx = final_k.index(min_k)
+    weak_count = sum(1 for kv in final_k if kv < K_VIZ_THRESHOLD)
 
     status_var.set(
-        f"✔ Done — N={N}, dt={dt}, k={k}, steps={steps}  |  "
-        f"Center: state={state_h[-1][N//2]:.4f}  "
-        f"vol={vol_h[-1][N//2]:.4f}  "
+        f"✔ Done — N={N}, dt={dt}, k={k_amp}, steps={steps}  |  "
+        f"Center state={state_h[-1][N//2]:.4f}  "
         f"face={face_h[-1][N//2]:.4f}  |  "
-        f"{frac_info}  |  Broken seeds: {broken_count} {broken_ids}"
+        f"Weakest interface: [{min_k_idx}↔{min_k_idx+1}] k={min_k:.4f}  |  "
+        f"Weak interfaces (<{K_VIZ_THRESHOLD}): {weak_count}"
     )
 
 tk.Button(
