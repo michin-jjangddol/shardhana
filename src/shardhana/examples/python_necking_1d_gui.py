@@ -15,6 +15,11 @@ v3: Fracture logic added.
     - Broken seeds excluded from neighbor interaction
     - Adjacent seeds' faces unchanged (no auto-cascade)
     - Broken seeds shown as red X in contact face plot
+
+v3a: Post-fracture neighbor face fix.
+    - If neighbor is broken → that side's face is frozen (not updated)
+    - Damage does NOT propagate through a broken interface
+    - fracture → interaction cutoff → no further damage propagation
 """
 
 import tkinter as tk
@@ -40,7 +45,7 @@ class Seed:
         face_left      — contact area on left face
         face_right     — contact area on right face
         broken         — True if fracture condition is met
-        face_threshold — face area below which fracture triggers
+        FACE_THRESHOLD — face area below which fracture triggers (class constant)
     """
 
     FACE_THRESHOLD = 0.2  # fixed fracture threshold
@@ -54,16 +59,22 @@ class Seed:
         self.face_right = area
         self.broken     = False  # fracture flag
 
-    def update_geometry(self, state_diff, geo_k=0.1):
+    def update_geometry(self, state_diff, left_broken=False, right_broken=False, geo_k=0.1):
         """
         Update geometry based on state change.
-        If already broken, skip geometry update (frozen state).
+        If already broken, skip entirely (frozen state).
 
-        state_diff: abs difference between this seed and neighbor avg
-        geo_k:      geometry sensitivity (keep small)
+        state_diff:   abs difference between this seed and neighbor avg
+        left_broken:  True if left neighbor is broken
+        right_broken: True if right neighbor is broken
+        geo_k:        geometry sensitivity (keep small)
+
+        v3a rule:
+            If neighbor is broken → that side's face is NOT updated (frozen).
+            Damage must not propagate through a broken interface.
         """
         if self.broken:
-            return  # broken seeds are frozen
+            return  # broken seeds are fully frozen
 
         # Length change: state increase → slight elongation
         self.length = max(0.01, self.length + geo_k * self.state)
@@ -73,11 +84,16 @@ class Seed:
 
         # Contact face degrades with increasing state gap
         damage_factor = max(0.0, 1.0 - state_diff)
-        self.face_left  = self.area * damage_factor
-        self.face_right = self.area * damage_factor
 
-        # ── Fracture check ──────────────────────────────────
-        # If either face drops below threshold → fracture
+        # ── v3a: only update face if that neighbor is NOT broken ──
+        if not left_broken:
+            self.face_left  = self.area * damage_factor
+
+        if not right_broken:
+            self.face_right = self.area * damage_factor
+
+        # ── Fracture check ────────────────────────────────────────
+        # Trigger on the faces that are still active (not frozen)
         if self.face_left < self.FACE_THRESHOLD or \
            self.face_right < self.FACE_THRESHOLD:
             self.broken = True
@@ -87,7 +103,7 @@ class Seed:
 
 def run_hem(N, dt, k, steps):
     """
-    Run 1D HEM simulation with geometry + fracture.
+    Run 1D HEM simulation with geometry + fracture (v3a).
 
     Returns:
         state_history   — list of state snapshots per step
@@ -108,17 +124,17 @@ def run_hem(N, dt, k, steps):
     face_history   = [snapshot("face_right")]
     broken_history = [snapshot("broken")]
 
-    fracture_step = None  # track when first fracture happens
+    fracture_step = None
 
     for step in range(steps):
         new_states = [s.state for s in seeds]  # copy
 
         for i in range(1, N - 1):
-            # ── Skip broken seeds entirely ──────────────────
+            # Skip broken seeds
             if seeds[i].broken:
                 continue
 
-            # Build neighbor average, also skip broken neighbors
+            # Broken neighbor → treat as neutral (use own state)
             left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
             right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
             neighbor_avg = (left_state + right_state) / 2.0
@@ -133,17 +149,21 @@ def run_hem(N, dt, k, steps):
         # Apply new states + update geometry
         for i in range(1, N - 1):
             if seeds[i].broken:
-                continue  # frozen — don't update
+                continue
 
             seeds[i].state = new_states[i]
 
-            # Neighbor avg for geometry (broken neighbors ignored)
+            # Neighbor avg for geometry
             left_state  = seeds[i - 1].state if not seeds[i - 1].broken else seeds[i].state
             right_state = seeds[i + 1].state if not seeds[i + 1].broken else seeds[i].state
             neighbor_avg = (left_state + right_state) / 2.0
 
             state_diff = abs(seeds[i].state - neighbor_avg)
-            seeds[i].update_geometry(state_diff)
+
+            # ── v3a: pass broken flags so face freeze works ───────
+            left_broken  = seeds[i - 1].broken
+            right_broken = seeds[i + 1].broken
+            seeds[i].update_geometry(state_diff, left_broken, right_broken)
 
         # Track first fracture step
         if fracture_step is None and any(s.broken for s in seeds):
@@ -165,7 +185,7 @@ root.configure(bg="#1e1e2e")
 
 # ── Header ───────────────────────────────────────────────────
 tk.Label(
-    root, text="Shardhana · 1D HEM Simulation (v3 — Fracture)",
+    root, text="Shardhana · 1D HEM Simulation (v3a — Fracture + Face Freeze)",
     bg="#1e1e2e", fg="#cdd6f4",
     font=("Arial", 14, "bold"), pady=10
 ).pack()
@@ -236,7 +256,6 @@ def plot_face_panel(ax, face_history, broken_history, steps):
     ax.clear()
     ax.set_facecolor("#181825")
 
-    # Plot face curves
     ax.plot(x, face_history[0],        color="#89b4fa", linewidth=1.5,
             marker="o", markersize=3, label="Step 0")
     ax.plot(x, face_history[step_mid], color="#fab387", linewidth=1.5,
@@ -251,8 +270,8 @@ def plot_face_panel(ax, face_history, broken_history, steps):
     # Mark broken seeds at final step with red X
     final_broken = broken_history[steps]
     final_face   = face_history[steps]
-    broken_x     = [i for i, b in enumerate(final_broken) if b]
-    broken_y     = [final_face[i] for i in broken_x]
+    broken_x = [i for i, b in enumerate(final_broken) if b]
+    broken_y = [final_face[i] for i in broken_x]
     if broken_x:
         ax.scatter(broken_x, broken_y, color="#f38ba8", marker="x",
                    s=80, linewidths=2, zorder=5, label="Broken")
@@ -287,12 +306,10 @@ def on_run():
     fig.tight_layout()
     canvas.draw()
 
-    # Count broken seeds at final step
     broken_count = sum(broken_h[steps])
     broken_ids   = [i for i, b in enumerate(broken_h[steps]) if b]
-
-    frac_info = (f"First fracture @ step {fracture_step}"
-                 if fracture_step else "No fracture")
+    frac_info    = (f"First fracture @ step {fracture_step}"
+                    if fracture_step else "No fracture")
 
     status_var.set(
         f"✔ Done — N={N}, dt={dt}, k={k}, steps={steps}  |  "
