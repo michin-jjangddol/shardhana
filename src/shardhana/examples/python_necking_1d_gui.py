@@ -221,7 +221,7 @@ root.title("Shardhana — 1D HEM Prototype")
 root.configure(bg="#1e1e2e")
 
 tk.Label(
-    root, text="Shardhana · 1D HEM Simulation (v3c — Continuous Interface k)",
+    root, text="Shardhana · 1D HEM Simulation (v3d — CSV Logging)",
     bg="#1e1e2e", fg="#cdd6f4",
     font=("Arial", 14, "bold"), pady=10
 ).pack()
