@@ -17,6 +17,10 @@ v3c: Continuous interface stiffness model.
      - k = f(face_right) → decreases as face degrades
      - interaction weighted by k, never fully blocked
      - visualization: k value shown as color intensity
+v3d: CSV logging added for verification.
+     - simulation_log.csv generated after each run
+     - fields: step, seed, state, volume, interface_k, broken
+     - utf-8-sig encoding for Excel compatibility
 """
 
 import tkinter as tk
@@ -25,6 +29,7 @@ matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+import csv
 
 # ── Constants ─────────────────────────────────────────────────
 K_CONTACT = 1.0    # full contact stiffness
@@ -130,6 +135,7 @@ def run_hem(N, dt, k_amp, steps):
     volume_history = [snap_seeds("volume")]
     face_history   = [snap_seeds("face_right")]
     ifc_k_history  = [snap_ifc_k()]
+    log_data = []                            # CSV 로그 저장용
 
     for step in range(steps):
         new_states = [s.state for s in seeds]
@@ -181,6 +187,25 @@ def run_hem(N, dt, k_amp, steps):
         face_history.append(snap_seeds("face_right"))
         ifc_k_history.append(snap_ifc_k())
 
+        # CSV 로그: 시드별 한 행씩 기록
+        for i in range(N):
+            ifc_k_val = interfaces[i].k if i < N - 1 else interfaces[-1].k
+            broken = 1 if ifc_k_val < K_VIZ_THRESHOLD else 0
+            log_data.append({
+                "step":        step + 1,
+                "seed":        i,
+                "state":       round(seeds[i].state, 6),
+                "volume":      round(seeds[i].volume, 6),
+                "interface_k": round(ifc_k_val, 6),
+                "broken":      broken,
+            })
+
+    # 시뮬레이션 종료 후 CSV 저장
+    with open("simulation_log.csv", "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, fieldnames=["step","seed","state","volume","interface_k","broken"])
+        writer.writeheader()
+        writer.writerows(log_data)
+        
     return state_history, volume_history, face_history, ifc_k_history
 
 
