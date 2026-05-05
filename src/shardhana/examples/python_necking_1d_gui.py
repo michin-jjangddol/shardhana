@@ -21,6 +21,7 @@ v3d: CSV logging added for verification.
      - simulation_log.csv generated after each run
      - fields: step, seed, state, volume, interface_k, broken
      - utf-8-sig encoding for Excel compatibility
+     - saved to script directory (os.path)
 """
 
 import tkinter as tk
@@ -30,6 +31,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import csv
+import os
 
 # ── Constants ─────────────────────────────────────────────────
 K_CONTACT = 1.0    # full contact stiffness
@@ -199,9 +201,12 @@ def run_hem(N, dt, k_amp, steps):
                 "interface_k": round(ifc_k_val, 6),
                 "broken":      broken,
             })
-
+    # 현재 스크립트 위치 기준으로 저장
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(script_dir, "simulation_log.csv")
+   
     # 시뮬레이션 종료 후 CSV 저장
-    with open("simulation_log.csv", "w", newline="", encoding="utf-8-sig") as f:
+    with open(csv_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=["step","seed","state","volume","interface_k","broken"])
         writer.writeheader()
         writer.writerows(log_data)
