@@ -22,6 +22,7 @@ v3d: CSV logging added for verification.
      - fields: step, seed, state, volume, interface_k, broken
      - utf-8-sig encoding for Excel compatibility
      - saved to script directory (os.path)
+     - timestamped filename to prevent overwrite 
 """
 
 import tkinter as tk
@@ -32,6 +33,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import csv
 import os
+from datetime import datetime
 
 # ── Constants ─────────────────────────────────────────────────
 K_CONTACT = 1.0    # full contact stiffness
@@ -203,7 +205,8 @@ def run_hem(N, dt, k_amp, steps):
             })
     # 현재 스크립트 위치 기준으로 저장
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    csv_path = os.path.join(script_dir, "simulation_log.csv")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    csv_path = os.path.join(script_dir, f"simulation_log_{timestamp}.csv")
    
     # 시뮬레이션 종료 후 CSV 저장
     with open(csv_path, "w", newline="", encoding="utf-8-sig") as f:
