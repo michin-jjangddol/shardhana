@@ -79,3 +79,6 @@ test_plot.png
 
 # 쥬피터
 notebooks
+
+*.csv
+*.CVS
