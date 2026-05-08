@@ -58,12 +58,28 @@ providing an experiment-based verification structure for HEM (Han Element Method
 
 ---
 
+### ■ Local Patch Assistant – Gico (GitHub Copilot)
+
+- Fast file-level modifications
+- Understands current repository/file context
+- Executes quick patch-style fixes
+- Connects code and documentation
+
+👉 Core: **Fast local improvement** (file-oriented)
+
+> Gico is strong at current repository/file context,
+> but does not determine long-term philosophy or overall project direction.
+>
+> Final decisions always belong to the user.
+
+---
+
 ## 3. Workflow
 
 ```
 [Design] → [Implement] → [Run] → [Generate Data] → [Validate]
     ↓            ↓          ↓            ↓               ↓
-  짱똘         Laude      짱똘          CSV             Gemi
+  짱똘     Laude / Gico    짱똘          CSV             Gemi
   Shana
 ```
 
@@ -181,12 +197,28 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
+### ■ 현장 패치 담당 – 기코 (Gico / GitHub Copilot)
+
+- 빠른 파일 단위 수정
+- 현재 저장소/파일 문맥 파악
+- 신속한 patch 기반 수정
+- 코드와 문서 연결
+
+👉 핵심: **빠른 현장 개선** (파일 중심)
+
+> 기코는 현재 파일/저장소 문맥에는 강하지만,
+> 장기 철학 및 전체 방향 판단은 하지 않는다.
+>
+> 최종 결정권은 항상 사용자에게 있다.
+
+---
+
 ## 3. 작업 흐름 (Workflow)
 
 ```
 [설계] → [구현] → [실행] → [데이터 생성] → [검증]
-   ↓         ↓         ↓         ↓           ↓
- 짱똘      로드      짱똘      CSV         제미
+   ↓          ↓         ↓         ↓           ↓
+ 짱똘     로드 / 기코   짱똘      CSV         제미
  샤나
 ```
 
