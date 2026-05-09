@@ -23,6 +23,11 @@ v3d: CSV logging added for verification.
      - utf-8-sig encoding for Excel compatibility
      - saved to script directory (os.path)
      - timestamped filename to prevent overwrite 
+     v4: Geometry / relation-based prototype started.
+     - Seed position (x0, x)
+     - Relation distance (d0, d)
+     - Boundary displacement concept
+     - relation-driven state evolution
 """
 
 import tkinter as tk
