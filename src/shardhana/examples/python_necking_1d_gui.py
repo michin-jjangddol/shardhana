@@ -372,4 +372,10 @@ tk.Button(
     command=on_run
 ).pack(pady=(0, 16))
 
+def on_close():
+    plt.close(fig)
+    root.quit()
+    root.destroy()
+
+root.protocol("WM_DELETE_WINDOW", on_close)
 root.mainloop()
