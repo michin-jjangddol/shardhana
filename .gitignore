@@ -82,3 +82,5 @@ notebooks
 
 *.csv
 *.CVS
+
+sync.ffs_db
