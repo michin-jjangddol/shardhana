@@ -1,5 +1,5 @@
 """
-necking_1d_gui.py
+necking_1d_gui_gui_v4a.py
 Shardhana — 1D HEM Prototype with GUI + Graph
 
 Rule-based localization visualization.
@@ -23,11 +23,79 @@ v3d: CSV logging added for verification.
      - utf-8-sig encoding for Excel compatibility
      - saved to script directory (os.path)
      - timestamped filename to prevent overwrite 
-     v4: Geometry / relation-based prototype started.
+v4: Geometry / relation-based prototype started.
      - Seed position (x0, x)
      - Relation distance (d0, d)
      - Boundary displacement concept
      - relation-driven state evolution
+v4a Note
+    This version is preserved as
+    an early “junkyard experiment”
+    of Shardhana 1D.
+
+    It is a complex byproduct
+    created together by
+    the smartest AI in human history
+    and Jjangddol,
+    a beginner in coding.
+
+    We tried to make something
+    that looked meaningful,
+    complex,
+    and simulation-like.
+
+    But at that time,
+    the true core of HEM
+    was not yet clearly understood.
+
+    Still,
+    this pile of “junk” is important.
+
+    Because inside it,
+    the first questions about:
+
+    - Seed
+    - Relation
+    - Space generation
+    - Time-based separation
+
+    began to appear.
+
+    Perhaps the future HEM Core
+    will someday rise again
+    from this very junkyard.
+    
+    이 버전은 Shardhana 1D의
+    
+    -----------------------------------
+    
+    초기 “쓰레기장 실험물”로 보존한다.
+
+    인류 역사상 가장 똑똑한 AI와
+    코드 초보 짱똘이 함께 만든
+    복잡한 부산물이다.
+
+    뭔가 있어 보이게,
+    복잡해 보이게,
+    시뮬레이션처럼 보이게 만들려 했지만,
+
+    아직 HEM의 진짜 핵심은
+    제대로 이해하지 못한 상태였다.
+
+    하지만 이 쓰레기 더미는 중요하다.
+
+    왜냐하면 이 안에서 처음으로:
+
+    - Seed
+    - Relation
+    - Space 생성
+    - 시간 기반 분리
+
+    에 대한 질문이 등장하기 시작했기 때문이다.
+
+    어쩌면 미래의 HEM Core는
+    바로 이 쓰레기장 위에서
+    다시 시작될지도 모른다.
 """
 
 import tkinter as tk
@@ -229,7 +297,7 @@ root.title("Shardhana — 1D HEM Prototype")
 root.configure(bg="#1e1e2e")
 
 tk.Label(
-    root, text="Shardhana · 1D HEM Simulation (v3d — CSV Logging)",
+    root, text="Shardhana · 1D HEM Simulation (v4a — CSV Logging)",
     bg="#1e1e2e", fg="#cdd6f4",
     font=("Arial", 14, "bold"), pady=10
 ).pack()
