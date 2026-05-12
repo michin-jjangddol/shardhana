@@ -74,6 +74,28 @@ providing an experiment-based verification structure for HEM (Han Element Method
 
 ---
 
+### ■ Execution Experiment Assistant – Cursor (AI IDE Worker)
+
+- Fast execution
+- Immediate code testing
+- Natural-language-based workflow
+- Iterative modification experiments
+
+👉 Core: **AI IDE focused on rapid execution and repeated experimentation**
+
+---
+
+### ■ Research Analysis Assistant – Cass (Cascade / Windsurf)
+
+- Document-based analysis
+- Understands project context
+- Reviews structure and direction
+- Research-support AI collaboration
+
+👉 Core: **Research-oriented AI IDE that reads context and structure**
+
+---
+
 ## 3. Workflow
 
 ```
@@ -210,6 +232,28 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 > 장기 철학 및 전체 방향 판단은 하지 않는다.
 >
 > 최종 결정권은 항상 사용자에게 있다.
+
+---
+
+### ■ 실행 실험 담당 - Cursor (AI IDE Worker)
+
+- 빠른 실행
+- 즉시 코드 테스트
+- 자연언어 기반 작업
+- 반복 수정 실험
+
+👉 핵심: **빠른 실행과 반복 실험 중심 AI IDE**
+
+---
+
+### ■ 연구 분석 담당 - Cass (Cascade / Windsurf)
+
+- 문서 기반 분석
+- 프로젝트 문맥 파악
+- 구조 및 방향 검토
+- 연구 보조형 AI 협업
+
+👉 핵심: **문맥과 구조를 읽는 연구형 AI IDE**
 
 ---
 
