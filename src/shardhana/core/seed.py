@@ -1,3 +1,7 @@
+'''
+최소 구조 단위
+'''
+
 """
 seed.py
 Shardhana Core Seed Definition
