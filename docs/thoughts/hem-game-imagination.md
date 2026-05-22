@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive / A Bit of Sci-Fi Rambling)*  
 *Date: 2026-05-21*
 
+## 🎧 Audio Narration
+
+- [🇺🇸 English Narration](../assets/audio/hem-game-imagination-en.mp3)
+
 ---
 
 A long time ago,  
@@ -181,6 +185,10 @@ all of this is just another
 *(Shardhana 생각창고 / SF 잡담 초안)*  
 *Date: 2026-05-21*
 
+## 🎧 Audio Narration
+
+- [🇰🇷 Korean Narration](../assets/audio/hem-game-imagination-ko.mp3)
+
 ---
 
 아주 오래전,  
@@ -349,3 +357,6 @@ HEM 세계에서는
 ---
 
 *이 문서는 샤나(GPT)와 로드(Claude)의 도움으로 작성되었습니다.*
+
+🎙️ Audio narration generated using ElevenLabs.
+https://elevenlabs.io/
