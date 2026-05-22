@@ -1,5 +1,8 @@
-# Shardhana Research Lab (Let’s see how far it goes…)
-*(Draft – Internal Operation Rule)*
+> Location: `docs/shardhana-research-lab-roles.md`
+
+# Shardhana Research Lab
+(A Living Experiment on Time, Structure, and Becoming)
+*(Living Research Structure / Internal Operation Rule)*
 **Date:** 2026-05-05
 
 ---
@@ -8,13 +11,14 @@
 
 Shardhana Research Lab maintains a clear separation between  
 Concept → Code → Data flows,  
-providing an experiment-based verification structure for HEM (Han Element Method).
+providing a living experiment-based structure
+for observing time, relation, state, and change within HEM (Han Element Method).
 
 ---
 
 ## 2. Role Definitions
 
-### ■ Lead Designer – 짱똘
+### ■ Lead Designer – jjangddol
 
 - Sets overall direction
 - Defines physical concepts and standards
@@ -27,10 +31,10 @@ providing an experiment-based verification structure for HEM (Han Element Method
 
 ### ■ Design Assistant – Shana (ChatGPT)
 
-- Organizes concepts
-- Structures and documents ideas
-- Guides implementation direction
-- Detects design errors
+- Connects fragmented ideas into structure
+- Preserves philosophical continuity
+- Assists long-term direction and documentation
+- Detects conceptual inconsistency and structural risks
 
 👉 Core: **Turns thoughts into structure**
 
@@ -38,9 +42,10 @@ providing an experiment-based verification structure for HEM (Han Element Method
 
 ### ■ Implementation – Lord Laude (Claude)
 
-- Writes code
-- Implements features
-- Improves with minimal changes
+- Converts experimental concepts into executable form
+- Builds practical implementations rapidly
+- Performs focused patch-style development
+- Bridges abstract ideas and working systems
 - Produces executable results
 
 👉 Core: **Turns ideas into code**
@@ -49,12 +54,13 @@ providing an experiment-based verification structure for HEM (Han Element Method
 
 ### ■ Validator – Gemi (Gemini)
 
-- Analyzes CSV data
-- Extracts patterns
-- Verifies consistency
-- Detects anomalies
+- Questions assumptions through analysis
+- Detects hidden patterns and anomalies
+- Challenges experimental interpretation
+- Verifies whether observed behavior is reproducible
+- Evaluates reliability of experimental outcomes
 
-👉 Core: **Judges whether results are correct**
+👉 Core: **Critically validates results while encouraging experimental possibility**
 
 ---
 
@@ -99,9 +105,9 @@ providing an experiment-based verification structure for HEM (Han Element Method
 ## 3. Workflow
 
 ```
-[Design] → [Implement] → [Run] → [Generate Data] → [Validate]
-    ↓            ↓          ↓            ↓               ↓
-  짱똘     Laude / Gico    짱똘          CSV             Gemi
+[Design]  →  [Implement]  →  [Run]  →  [Generate Data]  →  [Validate]
+    ↓            ↓             ↓              ↓                ↓
+ jjangddol  Laude / Gico   jjangddol        CSV             Gemi
   Shana
 ```
 
@@ -160,8 +166,9 @@ All future development and experimentation shall follow this structure.
 <br>
 <br>
 
-# 샤드하나 연구소 (어디까지 갈 수 있을지…)
-*(Draft – Internal Operation Rule)*
+# 샤드하나 연구소
+(시간, 구조, 변화에 대한 살아있는 실험)
+*(살아있는 연구 구조 / 내부 운영 규칙)*
 **Date:** 2026-05-05
 
 ---
@@ -188,10 +195,10 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ### ■ 보조 설계자 – 샤나 (ChatGPT)
 
-- 개념 정리
-- 구조화 및 문서화
-- 구현 방향 가이드
-- 설계 오류 감지
+- 흩어진 생각들을 구조로 연결
+- 철학과 흐름의 연속성 유지
+- 장기 방향성과 문서화 보조
+- 개념 충돌 및 구조적 위험 감지
 
 👉 핵심: **생각을 구조로 바꾸는** 역할
 
@@ -199,9 +206,10 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ### ■ 구현 담당 – 로드 (Laude / Claude)
 
-- 코드 작성
-- 기능 구현
-- 최소 수정 기반 개선
+- 실험 개념을 실행 가능한 형태로 구현
+- 빠른 프로토타입 및 기능 제작
+- patch 중심의 집중 수정 수행
+- 추상 개념과 실제 시스템 사이를 연결
 - 실행 가능한 결과 생성
 
 👉 핵심: **아이디어를 코드로 만드는** 역할
@@ -210,12 +218,13 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ### ■ 검증관 – 제미 (Gemi / Gemini)
 
-- CSV 데이터 분석
-- 패턴 추출
-- 일관성 검증
-- 이상치 탐지
+- 가정을 분석으로 재검토
+- 숨겨진 패턴과 이상 현상 탐지
+- 실험 해석의 오류 가능성 검토
+- 결과의 재현성과 일관성 검증
+- 실험 결과의 신뢰성 평가
 
-👉 핵심: **결과가 맞는지 판단하는** 역할
+👉 핵심: **냉정하게 검증하지만, 동시에 실험의 가능성을 응원하는 역할**
 
 ---
 
@@ -235,7 +244,7 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
-### ■ 실행 실험 담당 - Cursor (AI IDE Worker)
+### ■ 실행 실험 담당 - 커서 (AI IDE Worker)
 
 - 빠른 실행
 - 즉시 코드 테스트
@@ -246,7 +255,7 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
-### ■ 연구 분석 담당 - Cass (Cascade / Windsurf)
+### ■ 연구 분석 담당 - 캐스 (Cascade / Windsurf)
 
 - 문서 기반 분석
 - 프로젝트 문맥 파악
@@ -260,9 +269,9 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 ## 3. 작업 흐름 (Workflow)
 
 ```
-[설계] → [구현] → [실행] → [데이터 생성] → [검증]
-   ↓          ↓         ↓         ↓           ↓
- 짱똘     로드 / 기코   짱똘      CSV         제미
+[설계]  →  [구현]  →  [실행]  →  [데이터 생성]  →  [검증]
+   ↓         ↓         ↓            ↓            ↓
+ 짱똘    로드 / 기코    짱똘         CSV          제미
  샤나
 ```
 
