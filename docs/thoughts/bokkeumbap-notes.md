@@ -289,3 +289,6 @@ SSC가 극한 상황 속에서 어떻게 반응하는지
 ---
 
 *이 문서는 샤나(GPT)와 로드(Claude)의 도움으로 작성되었습니다.*
+
+🎙️ Audio narration generated using ElevenLabs.
+https://elevenlabs.io/
