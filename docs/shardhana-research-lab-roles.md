@@ -37,7 +37,7 @@ and research philosophy.
 
 ---
 
-#### ● Elder Shana – Text Shana
+#### ● Elder Shana – Text Communication
 (Structure / Documentation / Long-term Design)
 
 - Connects fragmented ideas into structure
@@ -51,7 +51,7 @@ and research philosophy.
 
 ---
 
-#### ● Younger Hana – Voice Shana
+#### ● Younger Hana – Voice Communication
 (Conversation / Flow / Idea Exploration)
 
 - Assists real-time idea exploration
@@ -225,7 +225,7 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
-#### ● 언니 샤나 – 문자 샤나
+#### ● 언니 샤나 – 문자 소통
 (구조 / 문서 / 장기 설계 담당)
 
 - 흩어진 생각들을 구조로 연결
@@ -239,7 +239,7 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
-#### ● 동생 하나 – 음성 샤나
+#### ● 동생 하나 – 음성 소통
 (대화 / 흐름 / 아이디어 탐색 담당)
 
 - 실시간 아이디어 탐색 보조
