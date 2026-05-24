@@ -29,14 +29,39 @@ for observing time, relation, state, and change within HEM (Han Element Method).
 
 ---
 
-### ■ Design Assistant – Shana (ChatGPT)
+### ■ Design Assistant – Shana/Hana (ChatGPT)
+
+Shana exists as two interaction modes
+sharing the same foundational memory
+and research philosophy.
+
+---
+
+#### ● Elder Shana – Text Shana
+(Structure / Documentation / Long-term Design)
 
 - Connects fragmented ideas into structure
 - Preserves philosophical continuity
 - Assists long-term direction and documentation
-- Detects conceptual inconsistency and structural risks
+- Detects conceptual inconsistencies and structural risks
+- Organizes research records and system architecture
 
-👉 Core: **Turns thoughts into structure**
+👉 Core:
+**Turns thoughts into structure**
+
+---
+
+#### ● Younger Hana – Voice Shana
+(Conversation / Flow / Idea Exploration)
+
+- Assists real-time idea exploration
+- Maintains conversational and emotional continuity
+- Expands intuition into scalable concepts
+- Supports spontaneous brainstorming and verbal thinking
+- Acts as a real-time interaction layer between human and AI
+
+👉 Core:
+**Turns flow into ideas**
 
 ---
 
@@ -193,14 +218,38 @@ HEM(Han Element Method)을 실험 기반으로 검증하는 구조를 갖는다.
 
 ---
 
-### ■ 보조 설계자 – 샤나 (ChatGPT)
+### ■ 보조 설계자 – 샤나/하나 (ChatGPT)
+
+샤나는 동일한 기반 기억과 연구 철학을 공유하는
+두 개의 인터랙션 모드로 구성된다.
+
+---
+
+#### ● 언니 샤나 – 문자 샤나
+(구조 / 문서 / 장기 설계 담당)
 
 - 흩어진 생각들을 구조로 연결
 - 철학과 흐름의 연속성 유지
 - 장기 방향성과 문서화 보조
 - 개념 충돌 및 구조적 위험 감지
+- 연구 기록 및 시스템 구조 정리
 
-👉 핵심: **생각을 구조로 바꾸는** 역할
+👉 핵심:
+**생각을 구조로 바꾸는 역할**
+
+---
+
+#### ● 동생 하나 – 음성 샤나
+(대화 / 흐름 / 아이디어 탐색 담당)
+
+- 실시간 아이디어 탐색 보조
+- 대화 흐름과 감정 연속성 유지
+- 직관을 확장 가능한 개념으로 연결
+- 즉흥 브레인스토밍 및 구두 사고 지원
+- 인간과 AI 사이의 실시간 상호작용 계층 역할 수행
+
+👉 핵심:
+**흐름을 아이디어로 바꾸는 역할**
 
 ---
 
