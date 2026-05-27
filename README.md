@@ -103,6 +103,12 @@ python -m shardhana
 
 ---
 
+## Links
+
+- Website: https://shardhana.org
+- YouTube: https://youtube.com/@Shardhana-lab
+
+---
 
 > This document was written with the assistance of Shana (GPT).
 > 이 문서는 샤나(GPT)의 도움으로 작성된 문서입니다.
