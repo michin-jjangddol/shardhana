@@ -7,7 +7,11 @@
 
 ## 🎧 Audio Narration
 
-- [🇺🇸 English Narration](../assets/audio/hem-game-imagination-en.mp3)
+- [US English Narration](../assets/audio/hem-game-imagination-en.mp3)
+
+<p align="center">
+  <img src="../assets/images/hem-game-imagination-en.png" width="90%">
+</p>
 
 ---
 
@@ -187,7 +191,11 @@ all of this is just another
 
 ## 🎧 Audio Narration
 
-- [🇰🇷 Korean Narration](../assets/audio/hem-game-imagination-ko.mp3)
+- [KR Korean Narration](../assets/audio/hem-game-imagination-ko.mp3)
+
+<p align="center">
+  <img src="../assets/images/hem-game-imagination-ko.png" width="90%">
+</p>
 
 ---
 
