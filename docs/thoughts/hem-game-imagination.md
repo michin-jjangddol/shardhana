@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive / A Bit of Sci-Fi Rambling)*  
 *Date: 2026-05-21*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/Z6WNeN_elNs?si=jvdtOlY1nt-WgvpV)
+
 ## 🎧 Audio Narration
 
 - [US English Narration](../assets/audio/hem-game-imagination-en.mp3)
@@ -188,6 +192,10 @@ all of this is just another
 
 *(Shardhana 생각창고 / SF 잡담 초안)*  
 *Date: 2026-05-21*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/VtuhvRvphpE?si=Rglo6HA5NNBpvSDS)
 
 ## 🎧 Audio Narration
 
