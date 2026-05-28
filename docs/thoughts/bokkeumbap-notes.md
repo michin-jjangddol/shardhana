@@ -9,9 +9,17 @@
   <img src="../assets/images/bokkeumbap_2.JPEG" width="48%">
 </p>
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/TwypNbERM3c?si=eISFghSyfBIKi8AY)
+
 ## 🎧 Audio Narration
 
 - [English Narration](../assets/audio/bokkeumbap-en.mp3)
+
+<p align="center">
+  <img src="../assets/images/bokkeumbap-notes-en.png" width="90%">
+</p>
 
 ---
 
@@ -161,10 +169,18 @@ And we will answer:
 *(Shardhana 생각창고 / Future Imagination Note)*  
 *Date: 2026-05-23*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/9BRjz6kg3y8?si=RXsosK7xzgQ4A3n1)
+
 ---
 ## 🎧 Audio Narration
 
 - [Korean Narration](../assets/audio/bokkeumbap-ko.mp3)
+
+<p align="center">
+  <img src="../assets/images/bokkeumbap-notes-ko.png" width="90%">
+</p>
 
 ---
 <br>
