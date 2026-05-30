@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/ZM40OYScW24?si=wS9O4xuyV1H3eW6F)
+
 <p align="center">
   <img src="../assets/images/hem-scale-note-image-en.png" width="90%">
 </p>
@@ -251,6 +255,10 @@ in the space between.
 
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/1mqvdRWw4Vc?si=dcxzcJx9SEQDpC6M)
 
 <p align="center">
   <img src="../assets/images/hem-scale-note-image-ko.png" width="90%">
