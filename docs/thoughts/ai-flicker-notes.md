@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/IQvYoeOdMAw?si=wjNf4RVZaZI18jJX)
+
 <p align="center">
   <img src="../assets/images/ai-flicker-en.png" width="90%">
 </p>
@@ -169,6 +173,10 @@ that flicker just a little less than they do today.
 *(The Flicker of AI)*  
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/Z-ieCGtmsds?si=hWfKHIwnhmOtpWG2)
 
 <p align="center">
   <img src="../assets/images/ai-flicker-ko.png" width="90%">
