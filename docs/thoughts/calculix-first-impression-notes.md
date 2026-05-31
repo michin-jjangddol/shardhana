@@ -10,6 +10,12 @@ https://github.com/Dhondtguido/CalculiX
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/R0zZU2e2xZo?si=FFCQVhJZEeriJnsQ)
+
+---
+
 <p align="center">
   <img src="../assets/images/calculix-first-impression-en.png" width="90%">
 </p>
@@ -261,6 +267,12 @@ It was clarity:
 
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
+
+## 🎬유튜브 영상
+
+[Watch on YouTube](https://youtu.be/c_MMTIh0Wfw?si=AfOZSvWnLUJkLe8L)
+
+---
 
 <p align="center">
   <img src="../assets/images/calculix-first-impression-ko.png" width="90%">
