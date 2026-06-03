@@ -5,6 +5,10 @@
 *(Research Note / Experimental Media Vision)*  
 *Date: 2026-05-28*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/fSln3HkP0fo)
+
 <p align="center">
   <img src="../assets/images/shardhana-shorts-vision-en.png" width="90%">
 </p>
@@ -164,6 +168,10 @@ what is this strange little lab?"*
 
 *(Research Note / Experimental Media Vision)*  
 *Date: 2026-05-28*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/BBQbnCKr_eY)
 
 <p align="center">
   <img src="../assets/images/shardhana-shorts-vision-ko.png" width="90%">
