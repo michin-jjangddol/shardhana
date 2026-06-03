@@ -10,6 +10,10 @@ https://github.com/SteveDoyle2/pyNastran
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/jyNc3ega46c?si=TlrAaa85Hi4S_g0Y)
+
 <p align="center">
   <img src="../assets/images/pynastran-first-impression-en.png" width="90%">
 </p>
@@ -301,6 +305,11 @@ it's still wandering near the entrance of that dream.
 
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-25*
+
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/VDcXnz1TCCY?si=4Z79V11oY5foDWQr)
 
 <p align="center">
   <img src="../assets/images/pynastran-first-impression-ko.png" width="90%">
