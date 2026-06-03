@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-27*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/RxwYBamfDsE?si=OA3aWJcmfJTdEWFb)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana-en.png" width="90%">
 </p>
@@ -132,6 +136,10 @@ a world may already be moving.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-05-27*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/ghjHc9SVxMA?si=7_1IJDZWyQ3V1CoH)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana-ko_1.png" width="90%">
