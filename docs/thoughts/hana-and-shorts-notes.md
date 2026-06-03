@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-05-27*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/b8LhRhOze9g)
+
 <p align="center">
   <img src="../assets/images/hana-and-shorts-en.png" width="90%">
 </p>
@@ -164,6 +168,10 @@ and think:
 
 *(Shardhana 생각창고)*  
 *Date: 2026-05-27*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/dY8asFNIRWM)
 
 <p align="center">
   <img src="../assets/images/hana-and-shorts-ko.png" width="90%">
