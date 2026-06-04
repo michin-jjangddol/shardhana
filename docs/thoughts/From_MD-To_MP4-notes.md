@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*  
 *Date: May 31 2026*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/xWCSTu60VWc)
+
 <p align="center">
   <img src="../assets/images/From-MD-To-MP4-en.png" width="90%">
 </p>
@@ -186,6 +190,10 @@ The End.
 *(시골컴 할아버지와 생각창고 아이들)*  
 *(Shardhana 생각창고)*  
 *Date: 2026-05-31*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/lMx-SRHire0)
 
 <p align="center">
   <img src="../assets/images/From-MD-To-MP4-ko.png" width="90%">
