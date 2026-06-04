@@ -8,7 +8,7 @@
 
 ## 🎬 YouTube Video
 
-[Watch on YouTube](https://youtu.be/xWCSTu60VWc)
+[Watch on YouTube](https://youtu.be/V6pktkAfnzU)
 
 <p align="center">
   <img src="../assets/images/From-MD-To-MP4-en.png" width="90%">
@@ -193,7 +193,7 @@ The End.
 
 ## 🎬 유튜브 영상
 
-[Watch on YouTube](https://youtu.be/lMx-SRHire0)
+[Watch on YouTube](https://youtu.be/al9GUZrT62w)
 
 <p align="center">
   <img src="../assets/images/From-MD-To-MP4-ko.png" width="90%">
