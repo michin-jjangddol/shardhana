@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*  
 *29 May 2026*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/xWCSTu60VWc)
+
 <p align="center">
   <img src="../assets/images/code-aster-first-impression-notes-en.png" width="90%">
 </p>
@@ -268,6 +272,10 @@ born inside that freedom to explore.
 *(지구촌 FEM 해석의 현재와, 그 너머를 바라보며)*  
 *(샤드하나 생각창고)*  
 *Date: 2026-05-29*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/lMx-SRHire0)
 
 <p align="center">
   <img src="../assets/images/code-aster-first-impression-notes-ko.png" width="90%">
