@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-03*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/CQoh8buRgkM)
+
 <p align="center">
   <img src="./assets/images/yeok-en.png" width="90%">
 </p>
@@ -209,6 +213,10 @@ to watch Yeok unfold.
 *(왜 HEM은 변화를 관찰하려 하는가?)*  
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-03*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/RGbbrjnUEmQ)
 
 <p align="center">
   <img src="./assets/images/yeok-ko.png" width="90%">
