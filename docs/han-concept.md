@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-04*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/imPb8R_vErw)
+
 <p align="center">
   <img src="./assets/images/han-concept-en.png" width="90%">
 </p>
@@ -191,6 +195,10 @@ and is released.
 *(HEM Core Concept Draft v0.1)*  
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-04*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/BsENf20EowA)
 
 <p align="center">
   <img src="./assets/images/han-concept-ko.png" width="90%">
