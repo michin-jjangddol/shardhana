@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-01*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/-4q0NfH7wCM)
+
 <p align="center">
   <img src="../assets/images/hem-and-sherlock-notes-en.png" width="90%">
 </p>
@@ -187,6 +191,10 @@ no matter where it lands.
 
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-01*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/vvzL6f5LIzE)
 
 <p align="center">
   <img src="../assets/images/hem-and-sherlock-notes-ko.png" width="90%">
