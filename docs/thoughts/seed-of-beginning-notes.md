@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-06*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/u6yOti3nOt8)
+
 <p align="center">
   <img src="../assets/images/seed-of-beginning-notes-en.png" width="90%">
 </p>
@@ -225,6 +229,10 @@ may begin from that question.
 *(출근길 관찰 기록 v0.1)*
 *(Shardhana Thought Archive)*
 *2026-06-06*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/77wcRM5VWCs)
 
 <p align="center">
   <img src="../assets/images/seed-of-beginning-notes-ko.png" width="90%">
