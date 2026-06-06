@@ -4,4 +4,4 @@
 Version information for Shardhana.
 """
 
-__version__ = "0.0.1.post3"
+__version__ = "0.0.1.post4"
