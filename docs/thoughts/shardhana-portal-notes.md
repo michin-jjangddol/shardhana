@@ -6,6 +6,10 @@
 *(Shardhana Research Lab)*
 *2026-06-05*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/JfnE6FI_c5Q)
+
 <p align="center">
   <img src="../assets/images/shardhana-portal-notes-en.png" width="90%">
 </p>
@@ -182,6 +186,10 @@ is a **Shardhana way of building**.
 *(퇴근길 낙서 기록 v0.1)*
 *(Shardhana Research Lab)*
 *2026-06-05*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/Di8kLdHmqZk)
 
 <p align="center">
   <img src="../assets/images/shardhana-portal-notes-ko.png" width="90%">
