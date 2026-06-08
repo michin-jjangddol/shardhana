@@ -1,7 +1,27 @@
+> Location: `docs/han-seed.md`
+
 # HEM Seed
 
-Version: 0.1-draft  
-Date: 2026-02-12  
+Version: 0.2-Draft Addition
+Date: 2026-06-09  
+
+---
+
+## 0. Han and Seed (Draft)
+
+Han represents the change, relation, or phenomenon
+that an observer wishes to understand.
+
+A Seed is an observational unit that contains a Han.
+
+Seed is not defined by absolute size.
+
+Depending on the observation scale,
+an atom, a column, a building,
+a city, or even a planet may become a Seed.
+
+The role of a Seed is determined not by size,
+but by the Han being observed.
 
 ---
 
@@ -11,7 +31,12 @@ HEM Seed is a finite energy entity with mass and volume.
 It is not a geometric point, nor a fixed core.  
 It is a latent energy cluster capable of continuous state change.
 
-HEM Seed represents a minimal dynamic unit of energy within the HEM system.
+HEM Seed represents an observational unit
+containing a Han of interest.
+
+Within the HEM framework,
+a Seed behaves as a dynamic energy entity
+capable of continuous state change
 
 ---
 
@@ -72,7 +97,16 @@ Spatial refinement and coarsening are consequences of energy-driven state evolut
 
 ## 6. Adaptive Scale
 
-Seed size is defined relative to the overall system scale.
+Seed size is not absolute.
+
+A Seed is selected according to
+the observation scale and the Han being studied.
+
+The same object may become a Seed
+at one scale,
+
+while a collection of Seeds may become
+a higher-level Seed at another scale.
 
 Through fusion and fission, Seed resolution may automatically adjust during simulation.
 
@@ -92,8 +126,27 @@ as energy redistributes across the system.
 
 # 헴 시드 (HEM Seed)
 
-Version: 0.1-draft  
-작성일: 2026-02-12  
+Version: 0.2-Draft Addition
+작성일: 2026-06-09
+
+---
+
+## 0. 한과 씨앗
+
+Han은 관찰자가 이해하고자 하는
+변화, 관계, 현상을 의미한다.
+
+Seed는 Han을 품고 있는 관측 단위이다.
+
+Seed는 절대적인 크기로 정의되지 않는다.
+
+관측 스케일에 따라
+원자, 기둥, 건물,
+도시, 혹은 행성 전체도
+Seed가 될 수 있다.
+
+Seed의 역할은 크기에 의해 결정되지 않으며,
+어떤 Han을 관찰하고자 하는가에 의해 결정된다.
 
 ---
 
@@ -103,7 +156,12 @@ HEM Seed는 질량과 부피를 가지는 유한한 에너지 존재이다.
 기하학적 점도 아니며, 고정된 코어도 아니다.  
 지속적으로 상태 변화를 일으킬 수 있는 잠재적 에너지 집합체이다.
 
-HEM Seed는 HEM 시스템 내에서의 최소 동적 에너지 단위이다.
+HEM Seed는 관찰자가 관심을 가지는 Han을
+품고 있는 관측 단위이다.
+
+HEM 프레임워크 내에서
+Seed는 지속적으로 상태 변화가 가능한
+동적 에너지 존재로 동작한다.
 
 ---
 
@@ -165,7 +223,17 @@ HEM Seed는 하나 밸류에 따라 동적으로 진화한다.
 
 ## 6. 적응형 스케일
 
-Seed 크기는 전체 시스템 스케일에 대해 상대적으로 정의된다.
+Seed 크기는 절대적인 값이 아니다.
+
+Seed는 관측 스케일과
+관찰하고자 하는 Han에 따라 선택된다.
+
+동일한 대상이 어떤 스케일에서는
+하나의 Seed가 될 수 있으며,
+
+다른 스케일에서는
+여러 Seed의 집합이
+상위 Seed가 될 수 있다.
 
 융합과 분열을 통해 해석 중 자동으로 해상도가 조정될 수 있다.
 
