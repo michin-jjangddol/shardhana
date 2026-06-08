@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-09*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/kJIgzZQ9Ip4)
+
 <p align="center">
   <img src="../assets/images/model-transformation-notes-en.png" width="90%">
 </p>
@@ -192,6 +196,10 @@ but **"model transformation."**
 *(FEM에서 HEM으로, 초기 생각 기록)*
 *(Shardhana Thought Archive)*
 *2026-06-09*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/QNLPBLoN9Sw)
 
 <p align="center">
   <img src="../assets/images/model-transformation-notes-ko.png" width="90%">
