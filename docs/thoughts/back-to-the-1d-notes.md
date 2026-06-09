@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-09*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/AS5JY-KX-PY)
+
 <p align="center">
   <img src="../assets/images/back-to-the-1d-notes-en.png" width="90%">
 </p>
@@ -198,6 +202,10 @@ and observe it again.**
 *(HEM의 첫 번째 실험을 생각하며)*
 *(Shardhana Thought Archive)*
 *2026-06-09*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/H4mLh7aSTLA)
 
 <p align="center">
   <img src="../assets/images/back-to-the-1d-notes-ko.png" width="90%">
