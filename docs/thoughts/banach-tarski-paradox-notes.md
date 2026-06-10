@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-10*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/K4JC6AUtP4g)
+
 <p align="center">
   <img src="../assets/images/banach-tarski-paradox-notes-en.png" width="90%">
 </p>
@@ -167,6 +171,10 @@ but **another way of observing the real world.**
 *(무한 분할과 현실 세계 사이에서)*
 *(Shardhana Thought Archive)*
 *2026-06-10*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/7c9iEZyWbmU)
 
 <p align="center">
   <img src="../assets/images/banach-tarski-paradox-notes-ko.png" width="90%">
