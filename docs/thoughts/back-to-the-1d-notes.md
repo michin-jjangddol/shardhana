@@ -1,4 +1,4 @@
-> Location: `docs/thoughts/ai-flicker-notes.md`
+> Location: `docs/thoughts/back-to-the-1d-notes.md`
 
 # Back to the 1D
 
