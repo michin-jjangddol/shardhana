@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-11*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/q8Xw-sN9Zbc)
+
 <p align="center">
   <img src="../assets/images/colot-sami-cos-notes-en.png" width="90%">
 </p>
@@ -175,6 +179,10 @@ but
 *(A Strange Day at Shardhana Research Lab)*
 *(Shardhana Thought Archive)*
 *2026-06-11*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/N8YTt71Fjtk)
 
 <p align="center">
   <img src="../assets/images/colot-sami-cos-notes-ko.png" width="90%">
