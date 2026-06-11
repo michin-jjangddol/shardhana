@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-11*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/EJwzYnLr1fY)
+
 <p align="center">
   <img src="../assets/images/ontology-notes-en.png" width="90%">
 </p>
@@ -223,6 +227,10 @@ arrived safely at its usual destination — somewhere entirely off track.
 *(존재에 대한 궁금증)*
 *(Shardhana Thought Archive)*
 *2026-06-11*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/04zrRpim9jk)
 
 <p align="center">
   <img src="../assets/images/ontology-notes-ko.png" width="90%">

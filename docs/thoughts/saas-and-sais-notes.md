@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-11*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/HRISWbkPxVw)
+
 <p align="center">
   <img src="../assets/images/saas-and-sais-notes-en.png" width="90%">
 </p>
@@ -192,6 +196,10 @@ much closer to **"SAIS"** than expected.
 *(SaaS and SAIS)*
 *(Shardhana Thought Archive)*
 *2026-06-11*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/DrNj6olwZtk)
 
 <p align="center">
   <img src="../assets/images/saas-and-sais-notes-ko.png" width="90%">
