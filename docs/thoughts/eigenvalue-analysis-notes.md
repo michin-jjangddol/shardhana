@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-12*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/FSo86DUn-Ag)
+
 <p align="center">
   <img src="../assets/images/eigenvalue-analysis-notes-en.png" width="90%">
 </p>
@@ -195,6 +199,10 @@ Or is it the shadow of existence?
 *(왜? 왜?? 왜???)*
 *(Shardhana Thought Archive)*
 *2026-06-12*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/ucGrJtzdGUQ)
 
 <p align="center">
   <img src="../assets/images/eigenvalue-analysis-notes-ko.png" width="90%">
