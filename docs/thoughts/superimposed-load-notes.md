@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-15*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/YvRg9RhSrco)
+
 <p align="center">
   <img src="../assets/images/superimposed-dead-load-notes-en.png" width="90%">
 </p>
@@ -193,6 +197,10 @@ That would be enough.
 *(Superimposed Load, Imposed Load, 그리고 시간의 흔적)*
 *(Shardhana Thought Archive)*
 *2026-06-15*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/2hyv2YGH2mY)
 
 <p align="center">
   <img src="../assets/images/superimposed-dead-load-notes-ko.png" width="90%">
