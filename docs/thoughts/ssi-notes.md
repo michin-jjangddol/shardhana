@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-15*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/OTSMXyyhM0M)
+
 <p align="center">
   <img src="../assets/images/ssi-notes-en.png" width="90%">
 </p>
@@ -290,6 +294,10 @@ And someone will ask again:
 *(Soil-Structure Interaction, 그리고 자연 따라 하기)*
 *(Shardhana Thought Archive)*
 *2026-06-15*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/HlSTr0J1nYY)
 
 <p align="center">
   <img src="../assets/images/ssi-notes-ko.png" width="90%">
