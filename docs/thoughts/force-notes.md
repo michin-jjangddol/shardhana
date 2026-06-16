@@ -6,6 +6,10 @@
 *(Shardhana Thought Archive)*
 *2026-06-16*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/jN9pMAcdoeQ)
+
 <p align="center">
   <img src="../assets/images/force-notes-en.png" width="90%">
 </p>
@@ -189,6 +193,10 @@ nature has shown us.
 *(Force, 그리고 너무 익숙해서 묻지 않았던 것)*
 *(Shardhana Thought Archive)*
 *2026-06-16*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/ZrbfUxRbuaI)
 
 <p align="center">
   <img src="../assets/images/force-notes-ko.png" width="90%">
