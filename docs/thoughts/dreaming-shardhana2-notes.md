@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-16*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/kuVgNjLV0Ng)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana2-en.png" width="90%">
 </p>
@@ -415,6 +419,10 @@ will be added, one layer at a time.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-16*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/VWZB2Uj-eX8)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana2-ko.png" width="90%">
