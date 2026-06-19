@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-20*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/m9rjqosbdJo)
+
 <p align="center">
   <img src="../assets/images/karpathy-notes-en.png" width="90%">
 </p>
@@ -402,6 +406,10 @@ And the small (slightly insane) lab keeps watching today, wide awake on the bus.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-20*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/whF4bPvHzJE)
 
 <p align="center">
   <img src="../assets/images/karpathy-notes-ko.png" width="90%">
