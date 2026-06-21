@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-20*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/UFNQ6jgrYkI)
+
 <p align="center">
   <img src="../assets/images/hem-scale2-notes-en.png" width="90%">
 </p>
@@ -197,6 +201,10 @@ It keeps going, somewhere else entirely.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-20*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/dUKRy1NF-Hw)
 
 <p align="center">
   <img src="../assets/images/hem-scale2-notes-ko.png" width="90%">
