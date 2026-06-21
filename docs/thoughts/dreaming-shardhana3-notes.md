@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-21*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/_u3PNyj4YTA)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana3-notes-en.png" width="90%">
 </p>
@@ -223,6 +227,10 @@ Maybe it was always a project that keeps a question alive.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-21*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/R79G7gysOjQ)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana3-notes-ko.png" width="90%">
