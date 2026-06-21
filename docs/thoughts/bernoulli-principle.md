@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-21*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/pETtBVWpSGg)
+
 <p align="center">
   <img src="../assets/images/bernoulli-principle-en.png" width="90%">
 </p>
@@ -242,8 +246,16 @@ It might begin on a bench, waiting for a bus.
 *(Shardhana 생각창고)*  
 *Date: 2026-06-21*
 
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/cgmS2uLweFE)
+
 <p align="center">
   <img src="../assets/images/bernoulli-principle-ko.png" width="90%">
+</p>
+
+<p align="center">
+  <img src="../assets/images/bernoulli-principle-sample.png" width="90%">
 </p>
 
 ---
