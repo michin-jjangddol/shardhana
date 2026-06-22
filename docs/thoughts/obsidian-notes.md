@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-22*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/M2LS3Db7Mwg)
+
 <p align="center">
   <img src="../assets/images/obsidian-notes-en.png" width="90%">
 </p>
@@ -327,6 +331,10 @@ Shardhana : a thought archive, built for questions
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-22*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/51UTaJJ8eV0)
 
 <p align="center">
   <img src="../assets/images/obsidian-notes-ko.png" width="90%">
