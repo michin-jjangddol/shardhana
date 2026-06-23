@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-23*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/tslIYo3RBgg)
+
 <p align="center">
   <img src="../assets/images/curiosity-notes-en.png" width="90%">
 </p>
@@ -257,6 +261,10 @@ A companion that grows curious alongside you.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-23*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/_kvd8y5lyKc)
 
 <p align="center">
   <img src="../assets/images/curiosity-notes-ko.png" width="90%">
