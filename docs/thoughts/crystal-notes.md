@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/4jvfm-Mhy60)
+
 <p align="center">
   <img src="../assets/images/crystal-notes-en.png" width="90%">
 </p>
@@ -25,7 +29,7 @@ But following the photos along,
 
 the conversation drifted toward atoms,
 
-crystals,
+crystals,c
 
 grains,
 
@@ -397,6 +401,10 @@ and finally to Seed.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-25*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/9pPGGePzJNk)
 
 <p align="center">
   <img src="../assets/images/crystal-notes-ko.png" width="90%">
