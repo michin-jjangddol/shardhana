@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-24*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/0q2ttLY2Y4w)
+
 <p align="center">
   <img src="../assets/images/entropy-notes-en.png" width="90%">
 </p>
@@ -269,6 +273,10 @@ That's enough.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-24*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/wefsSj0nXf0)
 
 <p align="center">
   <img src="../assets/images/entropy-notes-ko.png" width="90%">
