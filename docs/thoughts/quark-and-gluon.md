@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-25*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/d3ktn68NWFU)
+
 <p align="center">
   <img src="../assets/images/quark-and-gluon-en.png" width="90%">
 </p>
@@ -369,6 +373,10 @@ That's enough.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-25*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/HyqanV61FrQ)
 
 <p align="center">
   <img src="../assets/images/quark-and-gluon-ko.png" width="90%">
