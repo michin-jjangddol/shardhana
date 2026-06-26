@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-26*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/_a3eKHQwmNI)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana4-en.png" width="90%">
 </p>
@@ -403,6 +407,10 @@ That's enough.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-26*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/CQtmHUCZR6I)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana4-ko.png" width="90%">
