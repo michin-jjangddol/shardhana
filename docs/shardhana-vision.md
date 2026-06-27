@@ -6,7 +6,7 @@
 ### for Exploring Structure, Change, and Time
 
 *Date: 2026-06-27*
-  <img src="./assets/images/shardhana-vision-ko.png" width="90%">
+  <img src="./assets/images/shardhana-vision-en.png" width="90%">
 </p>
 
 ---
