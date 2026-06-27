@@ -1,199 +1,593 @@
-# Shardhana Development Vision
-*Core Philosophy & Architecture | Date: 2026-04-21*
+> Location: `docs/shardhana-vision.md`
+
+# Shardhana Vision
+
+### An Open-Source Research Platform
+### for Exploring Structure, Change, and Time
+
+*Date: 2026-06-27*
+  <img src="./assets/images/shardhana-vision-ko.png" width="90%">
+</p>
 
 ---
 
-## 1. Purpose
+## 1. How It Began
 
-Shardhana is a structural analysis engine that does not depend on the cloud.
-
-- Runs on a personal PC
-- Works without internet access
-- Users have full control over their data
-- Extensible only when needed — not by default
+Shardhana did not begin as a project to build a structural analysis program.
 
 ---
 
-## 2. Core Principle
+It started with an attempt to understand FEM and AEM
 
-**Local-first, Cloud-optional**
-
-The default is local execution.
-The cloud is an option, not a prerequisite.
+in order to study structural engineering.
 
 ---
 
-## 3. Architecture
-
-### 3.1 Local Core (Required)
-
-The core engine must satisfy the following:
-
-- Perform structural analysis locally
-- Implement core concepts of HEM / FEM
-- Support debugging and visualization
-- Run on low-spec environments
-
-This is the body of Shardhana.
+And as that study continued, one question emerged.
 
 ---
 
-### 3.2 Cloud Extension (Optional)
-
-The cloud is used only in the following cases:
-
-- Large-scale analysis
-- High-performance computation
-- Parallel processing
-- Remote execution
-
-The cloud does not replace the core.
-It is simply a tool that extends its capabilities.
+> Can the structure, change, and flow of time
+> in the real world
+> be expressed inside a computer?
 
 ---
 
-### 3.3 System Structure
+That question grew larger with time,
 
-```
-Shardhana
-├─ core/        # Local analysis engine (required)
-├─ solver/      # Analysis logic
-├─ plugins/     # Extended features
-└─ cloud/       # Optional remote execution
-```
+and eventually led to a new direction:
 
-This structure is designed to protect the local core while keeping extensions separate.
+HEM — Han Element Method.
 
 ---
 
-## 4. Philosophy
+Shardhana is a research platform
 
-Modern software is moving toward subscription-based pricing, cloud dependency, and reduced user control.
-Shardhana deliberately takes a different path.
-
-> Shardhana is a tool, not a service.
+built to keep exploring that question.
 
 ---
 
-## 5. Long-term Vision
+## 2. Vision
 
-- Centered on a stable local core
-- Extensible through a plugin-based architecture
-- Execution mode is selectable: Local by default, Cloud when needed
+Shardhana's ultimate goal is to build
 
----
+an open-source structural analysis research platform
 
-## 6. One-line Definition
-
-Shardhana is a structural analysis platform that is complete locally, with the cloud used only when necessary.
+that anyone can use freely.
 
 ---
 
-*This document serves as the design standard for Shardhana.
-All future feature additions and structural changes shall be evaluated against these principles.*
+From small buildings on Earth
+
+to future structures in space,
+
+the aim is an environment where structure, change, and time
+
+can be researched together.
 
 ---
 
-> This document was prepared with the assistance of Shana (GPT) and Laude (Claude).
+Not a tool available only to specific companies or organizations,
 
+but a research environment that anyone can use —
+
+like air.
+
+---
+
+## 3. Research Philosophy
+
+Shardhana is not a project that provides answers.
+
+---
+
+It is a project building a platform
+
+where questions can keep going.
+
+---
+
+We are not trying to copy nature as it is.
+
+We are researching ways to understand it, together.
+
+---
+
+HEM, too, is not a finished theory.
+
+It is a growing record of research.
+
+---
+
+## 4. Development Philosophy
+
+Shardhana is developed around the following principles.
+
+- **Local-first**
+- **Cloud-optional**
+- **Human-directed**
+- **AI-assisted**
+- **Open-source**
+
+---
+
+The foundation is always the local computer.
+
+Users manage their own data directly,
+
+and research must be able to continue without an internet connection.
+
+---
+
+The cloud is optional —
+
+used only as a tool to expand computing capacity
+
+when needed.
+
+---
+
+## 5. AI and Shardhana
+
+AI does not replace research.
+
+AI is a research assistant.
+
+---
+
+It organizes documents,
+
+writes code,
+
+analyzes materials,
+
+and reduces repetitive work —
+
+---
+
+but the person who forms the questions
+
+is always the user.
+
+---
+
+Shardhana aims to be an environment
+
+where people and AI research together.
+
+---
+
+*The computer waits.*
+
+*The person asks.*
+
+---
+
+## 6. The Platform
+
+Shardhana is not a single program.
+
+It is growing, gradually, into a research platform.
+
+---
+
+Structural analysis.
+
+Research notes.
+
+Portal.
+
+Workspace.
+
+AI Assistant.
+
+Local AI.
+
+Cloud AI.
+
+HEM Solver.
+
+---
+
+The goal is for all of these
+
+to connect naturally
+
+within a single research environment.
+
+---
+
+## 7. HEM
+
+HEM (Han Element Method) was not created to replace FEM or AEM.
+
+---
+
+It is a research effort to expand
+
+the perspective through which structure is understood.
+
+---
+
+HEM explores the possibility of expressing
+
+not only stress and displacement,
+
+but also relationship,
+
+change,
+
+time,
+
+and the flow of nature.
+
+---
+
+It is not yet a finished theory.
+
+It is research that grows alongside Shardhana.
+
+---
+
+## 8. Open Source
+
+Shardhana chose open source.
+
+---
+
+Because we believe that knowledge
+
+creates greater value when it grows together.
+
+---
+
+Someone fixes a bug.
+
+Someone writes documentation.
+
+Someone proposes a new idea.
+
+---
+
+Those small contributions gather
+
+and build a larger research platform.
+
+---
+
+## 9. What Comes Next
+
+Shardhana is not a finished project.
+
+---
+
+The goal is for tomorrow to be a little better than today,
+
+and the next version to be a little better than tomorrow.
+
+---
+
+One commit.
+
+One document.
+
+One question.
+
+They gather, and become a platform.
+
+---
+
+## 10. One-Line Definition
+
+> **Shardhana is a Local-first open-source research platform for exploring structure, change, and time together.**
+
+---
+
+> *All research begins with a single question.*
+>
+> *Shardhana, too, began with a single question.*
+>
+> **Can the structure, change, and flow of time in the real world be expressed inside a computer?**
+
+---
+
+*This document was prepared with the assistance of Shana (GPT) and Laude (Claude).*
+
+---
 <br>
 <br>
 
-# 샤드하나 개발 방향성  
-핵심 철학 및 구조 | 작성일: 2026-04-21
+# 샤드하나 비전
+
+### 구조, 변화, 그리고 시간을 함께 탐구하는
+### 오픈소스 연구 플랫폼
+
+*Date: 2026-06-27*
+
+<p align="center">
+  <img src="./assets/images/shardhana-vision-ko.png" width="90%">
+</p>
 
 ---
 
-## 1. 목적
+## 1. 시작
 
-샤드하나는 클라우드에 종속되지 않는 구조해석 엔진이다.
+샤드하나는
 
-- 개인 PC에서 실행 가능
-- 인터넷 없이 동작
-- 사용자가 데이터를 완전히 통제
-- 필요할 때만 확장 — 의존하지 않음
+단순한 구조해석 프로그램을 만들기 위해 시작된 프로젝트가 아니다.
 
 ---
 
-## 2. 핵심 원칙
+처음에는
 
-**Local-first, Cloud-optional**
+구조해석을 공부하기 위해
 
-기본은 로컬 실행이다.  
-클라우드는 선택지이지, 전제 조건이 아니다.
-
----
-
-## 3. 설계 방향
-
-### 3.1 로컬 코어 (필수)
-
-코어 엔진의 조건:
-
-- 로컬에서 구조해석 수행
-- HEM / FEM 기본 개념 구현
-- 디버깅 및 시각화 가능
-- 저사양 환경에서도 동작
-
-이것이 샤드하나의 본체다.
+FEM과 AEM을 이해하려 했다.
 
 ---
 
-### 3.2 클라우드 확장 (선택)
+조금씩 공부를 이어가면서
 
-클라우드는 다음 상황에서만 쓴다:
-
-- 대형 해석
-- 고성능 계산
-- 병렬 처리
-- 원격 실행
-
-클라우드는 코어를 대체하지 않는다.  
-능력을 확장하는 도구일 뿐이다.
+하나의 질문이 생겼다.
 
 ---
 
-### 3.3 시스템 구조
-
-```
-Shardhana
-
-├─ core/        # 로컬 해석 엔진 (필수)
-├─ solver/      # 해석 로직
-├─ plugins/     # 확장 기능
-└─ cloud/       # 선택적 원격 실행
-```
-
-이 구조는 로컬 코어를 보호하면서 확장을 분리하기 위한 것이다.
+> 현실 세계의 구조와 변화,
+> 그리고 시간을
+> 컴퓨터 안에서 표현할 수 있을까?
 
 ---
 
-## 4. 철학
+이 질문은 시간이 흐를수록 더욱 커졌고,
 
-현대 소프트웨어는 구독 과금, 클라우드 의존, 사용자 통제 약화 쪽으로 흘러가고 있다.  
-Shardhana는 반대 방향을 선택한다.
-
-> 샤드하나는 서비스가 아니라 도구다.
+결국 HEM(Han Element Method)이라는 새로운 방향으로 이어졌다.
 
 ---
 
-## 5. 장기 비전
+샤드하나는
 
-- 안정적인 로컬 코어를 중심으로
-- 플러그인을 통해 기능을 확장하고
-- 실행 방식은 Local에서 Cloud로 선택적으로 확장된다
+그 질문을 계속 탐구하기 위한 연구 플랫폼이다.
 
 ---
 
-## 6. 한 줄 정의
+## 2. 비전
 
-샤드하나는 로컬에서 완성되고, 클라우드는 필요할 때만 쓰는 구조해석 플랫폼이다.
+샤드하나의 궁극적인 목표는
+
+누구나 자유롭게 사용할 수 있는
+
+오픈소스 구조해석 연구 플랫폼을 만드는 것이다.
 
 ---
 
-이 문서는 Shardhana의 설계 기준으로 사용되며,  
-향후 모든 기능 추가 및 구조 변경은 이 원칙을 기준으로 판단한다.
+지구의 작은 건축물부터,
+
+미래 우주 구조물까지,
+
+구조와 변화, 그리고 시간을 함께 연구할 수 있는 환경을 지향한다.
 
 ---
 
-> 이 문서는 샤나(GPT)와 로드 Laude(Claude)의 도움으로 작성되었습니다.
+특정 기업이나 조직만 사용할 수 있는 프로그램이 아니라,
+
+공기처럼 누구나 사용할 수 있는 연구 환경을 만드는 것이 목표이다.
+
+---
+
+## 3. 연구 철학
+
+샤드하나는
+
+정답을 제공하는 프로젝트가 아니다.
+
+---
+
+질문을 계속할 수 있는 플랫폼을 만드는 프로젝트이다.
+
+---
+
+우리는 자연을 그대로 복사하려는 것이 아니라,
+
+자연을 이해하기 위한 방법을 함께 연구한다.
+
+---
+
+HEM 또한 완성된 이론이 아니라,
+
+계속 성장하는 연구의 기록이다.
+
+---
+
+## 4. 개발 철학
+
+샤드하나는 다음 원칙을 중심으로 개발된다.
+
+- **Local-first** (로컬 우선)
+- **Cloud-optional** (클라우드는 선택)
+- **Human-directed** (사람이 연구를 주도)
+- **AI-assisted** (AI는 연구를 지원)
+- **Open-source** (오픈소스)
+
+---
+
+기본은 언제나 로컬 컴퓨터이다.
+
+사용자는 자신의 데이터를 직접 관리하며,
+
+인터넷 없이도 연구를 계속할 수 있어야 한다.
+
+---
+
+클라우드는 선택 사항이며,
+
+필요한 경우에만
+
+계산 능력을 확장하기 위한 도구로 사용한다.
+
+---
+
+## 5. AI와 샤드하나
+
+AI는 연구를 대신하지 않는다.
+
+AI는 연구를 함께하는 조수이다.
+
+---
+
+문서를 정리하고,
+
+코드를 작성하고,
+
+자료를 분석하고,
+
+반복 작업을 줄여주지만,
+
+---
+
+질문을 만드는 사람은 언제나 사용자이다.
+
+---
+
+샤드하나는
+
+사람과 AI가 함께 연구하는 환경을 지향한다.
+
+---
+
+*컴퓨터는 기다린다.*
+
+*사람은 질문한다.*
+
+---
+
+## 6. 플랫폼
+
+샤드하나는 하나의 프로그램이 아니라,
+
+점차 하나의 연구 플랫폼으로 성장해 간다.
+
+---
+
+구조해석.
+
+연구노트.
+
+Portal.
+
+Workspace.
+
+AI Assistant.
+
+Local AI.
+
+Cloud AI.
+
+HEM Solver.
+
+---
+
+모두가 하나의 연구 환경 안에서
+
+자연스럽게 연결되는 것을 목표로 한다.
+
+---
+
+## 7. HEM
+
+HEM(Han Element Method)은
+
+FEM과 AEM을 대체하기 위해 만들어진 것이 아니다.
+
+---
+
+구조를 바라보는 관점을
+
+조금 더 넓게 확장하기 위한 연구이다.
+
+---
+
+HEM은
+
+응력과 변위뿐 아니라,
+
+관계,
+
+변화,
+
+시간,
+
+그리고 자연의 흐름을 함께 표현할 수 있는 가능성을 탐구한다.
+
+---
+
+아직 완성된 이론은 아니다.
+
+샤드하나와 함께 성장하는 연구이다.
+
+---
+
+## 8. 오픈소스
+
+샤드하나는 오픈소스를 선택했다.
+
+---
+
+지식은 함께 성장할수록
+
+더 큰 가치를 만든다고 믿기 때문이다.
+
+---
+
+누군가는 버그를 수정하고,
+
+누군가는 문서를 작성하고,
+
+누군가는 새로운 아이디어를 제안할 수 있다.
+
+---
+
+그 작은 기여들이 모여
+
+더 큰 연구 플랫폼을 만들어 간다.
+
+---
+
+## 9. 앞으로
+
+샤드하나는 완성된 프로젝트가 아니다.
+
+---
+
+오늘보다 내일,
+
+내일보다 다음 버전이
+
+조금 더 나아지는 것을 목표로 한다.
+
+---
+
+하나의 커밋,
+
+하나의 문서,
+
+하나의 질문이
+
+모여 하나의 플랫폼이 되어 간다.
+
+---
+
+## 10. 한 줄 정의
+
+> **샤드하나는 구조, 변화, 그리고 시간을 함께 탐구하기 위한 Local-first 오픈소스 연구 플랫폼이다.**
+
+---
+
+> *모든 연구는 하나의 질문에서 시작된다.*
+>
+> *샤드하나 역시 하나의 질문에서 시작되었다.*
+>
+> **현실 세계의 구조와 변화, 그리고 시간을 컴퓨터 안에서 표현할 수 있을까?**
+
+---
+
+*이 문서는 샤나(GPT)와 로드(Claude)의 도움으로 작성되었습니다.*
