@@ -5,6 +5,10 @@
 ### An Open-Source Research Platform
 ### for Exploring Structure, Change, and Time
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/36Dd8UxMvXk)
+
 *Date: 2026-06-27*
   <img src="./assets/images/shardhana-vision-en.png" width="90%">
 </p>
@@ -303,6 +307,10 @@ They gather, and become a platform.
 ### 오픈소스 연구 플랫폼
 
 *Date: 2026-06-27*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/DXheHwh5ZFs)
 
 <p align="center">
   <img src="./assets/images/shardhana-vision-ko.png" width="90%">
