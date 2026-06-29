@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-29*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/SN961yYIZSM)
+
 <p align="center">
   <img src="../assets/images/scale-translation-en.png" width="90%">
 </p>
@@ -193,6 +197,10 @@ but a world where each scale begins to understand the others.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-29*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/aEe5FKOHt60)
 
 <p align="center">
   <img src="../assets/images/scale-translation-ko.png" width="90%">
