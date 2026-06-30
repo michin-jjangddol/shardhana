@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*  
 *Date: 2026-06-30*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/-E3v6V3rayU)
+
 <p align="center">
   <img src="../assets/images/curiosity2-notes-en.png" width="90%">
 </p>
@@ -239,6 +243,10 @@ What are you curious about today?
 
 *(Shardhana 생각창고)*  
 *Date: 2026-06-30*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/M2evzYLVekk)
 
 <p align="center">
   <img src="../assets/images/curiosity2-notes-ko.png" width="90%">
