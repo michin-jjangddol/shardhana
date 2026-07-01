@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*
 *Date: 2026-07-01*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/66ePgpv3XGI)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana5-notes-en.png" width="90%">
 </p>
@@ -411,6 +415,10 @@ is enough to start another piece of research.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-07-01*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/H8e48H9ctK8)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana5-notes-ko.png" width="90%">
