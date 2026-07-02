@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*
 *Date: 2026-07-02*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/bDpUpfAwaEs)
+
 <p align="center">
   <img src="../assets/images/ollama-notes-en.png" width="90%">
 </p>
@@ -389,6 +393,10 @@ in that small workshop.
 
 *(Shardhana 생각창고)*  
 *Date: 2026-07-02*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/umy_UlZKTqA)
 
 <p align="center">
   <img src="../assets/images/ollama-notes-ko.png" width="90%">
