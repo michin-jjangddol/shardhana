@@ -7,6 +7,10 @@
 *(Shardhana Guide)*
 *Date: 2026-07-03*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/muUsHZoiiQI)
+
 <p align="center">
   <img src="../assets/images/open-source-companions-en.png" width="90%">
 </p>
@@ -344,6 +348,10 @@ along that path.
 
 *(Shardhana Guide)*
 *Date: 2026-07-03*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/T4fivyJ7TIg)
 
 <p align="center">
   <img src="../assets/images/open-source-companions-ko.png" width="90%">
