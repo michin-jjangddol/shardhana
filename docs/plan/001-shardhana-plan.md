@@ -6,6 +6,10 @@
 
 *(Shardhana Guide) Date: 2026-07-05*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/kmMnuLFObRw)
+
 <p align="center">
   <img src="../assets/images/001-shardhana-plan-en.png" width="90%">
 </p>
@@ -132,6 +136,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 실행 가능한 작은 로컬 어플을 위한 첫 번째 개발 계획
 
 *(Shardhana Guide) Date: 2026-07-05*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/gLI-4lIWe7o)
 
 <p align="center">
   <img src="../assets/images/001-shardhana-plan-ko.png" width="90%">
