@@ -7,6 +7,10 @@
 *(Shardhana Thought Archive)*
 *Date: 2026-07-06*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/gjwpjjWSzu4)
+
 <p align="center">
   <img src="../assets/images/what-en.png" width="90%">
 </p>
@@ -153,6 +157,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 *(Shardhana Thought Archive)*
 *Date: 2026-07-06*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/B0H-X2cYrD8)
 
 <p align="center">
   <img src="../assets/images/what-ko.png" width="90%">
