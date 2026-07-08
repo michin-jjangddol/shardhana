@@ -4,6 +4,10 @@
 
 This document is a foundational reference for understanding the steel production process.
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/-uSSIv8DR1w)
+
 <p align="center">
   <img src="../assets/images/steel-manufacturing-process-en.png" width="90%">
 </p>
@@ -211,6 +215,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 *(Steel Manufacturing Process Overview)*
 
 제철 생산 공정을 이해하기 위한 기초자료이다.
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/sJEPxJODXW4)
 
 <p align="center">
   <img src="../assets/images/steel-manufacturing-process-ko.png" width="90%">
