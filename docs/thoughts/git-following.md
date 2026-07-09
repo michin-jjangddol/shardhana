@@ -7,6 +7,10 @@ Location: `docs/thoughts/git-following-en.md`
 *(Shardhana Thought Archive)*
 *Date: 2026-07-09*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/9XRchktQis8)
+
 <p align="center">
   <img src="../assets/images/git-following-en.png" width="90%">
 </p>
@@ -247,6 +251,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 *(Shardhana Thought Archive)*
 *Date: 2026-07-09*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/nHkY2C79H6U)
 
 <p align="center">
   <img src="../assets/images/git-following-ko.png" width="90%">
