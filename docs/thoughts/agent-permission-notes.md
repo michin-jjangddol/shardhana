@@ -6,6 +6,10 @@ Location: `docs/thoughts/agent-permission-notes.md`
 *(Shardhana Thought Archive)*
 *Date: 2026-07-11*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/DvcoCgVwSUQ)
+
 <p align="center">
   <img src="../assets/images/agent-permission-notes-en.png" width="90%">
 </p>
@@ -333,6 +337,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 *(Shardhana Thought Archive)*
 *Date: 2026-07-11*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/MhIke-1zhM8)
 
 <p align="center">
   <img src="../assets/images/agent-permission-notes-ko.png" width="90%">
