@@ -1,10 +1,14 @@
-**Document Path:** `docs/thoughts/embarrassing-past-en.md`
+**Document Path:** `docs/thoughts/embarrassing-past.md`
 
 # An Embarrassing Past
 
 *(Shardhana Thought Archive)*
 
 *Date: 2026-07-17*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/WKqRS9w80ko)
 
 <p align="center">
   <img src="../assets/images/embarrassing-past-en.png" width="90%">
@@ -292,6 +296,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 *(Shardhana Thought Archive)*
 
 *Date: 2026-07-17*
+
+## 🎬 유튜브 영상
+
+[Watch on YouTube](https://youtu.be/yZwDfkqYqlA)
 
 <p align="center">
   <img src="../assets/images/embarrassing-past-ko.png" width="90%">
