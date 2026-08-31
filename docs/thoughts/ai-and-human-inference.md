@@ -7,7 +7,7 @@
 *Category: AI Reflections · Date: 2026-08-21*
 
 <p align="center">
-  <img src="../assets/images/ai-and-human-inference-ko.png" width="90%">
+  <img src="../assets/images/ai-and-human-inference-en.png" width="90%">
 </p>
 
 ---
