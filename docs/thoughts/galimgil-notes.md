@@ -143,7 +143,7 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 *Category: Thought Archive · Date: 2026-08-15*
 
 <p align="center">
-  <img src="../assets/images/galimgil-en.png" width="90%">
+  <img src="../assets/images/galimgil-ko.png" width="90%">
 </p>
 
 ---
