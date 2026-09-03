@@ -1,4 +1,4 @@
-> Location: docs/thoughts/dreaming-shardhana6-en.md
+> Location: docs/thoughts/dreaming-shardhana6-notes.md
 
 # Dreaming Shardhana 6
 
