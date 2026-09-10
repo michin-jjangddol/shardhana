@@ -6,6 +6,10 @@
 
 *Category: Thought Archive · Date: 2026-07-29*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/ZZqtaK0ztXs)
+
 <p align="center">
   <img src="../assets/images/daegukjaharyu-en.png" width="90%">
 </p>
@@ -402,6 +406,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 출근길에 만난 다섯 글자
 
 *Category: Thought Archive · Date: 2026-07-29*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/FVr5YHSvbEk)
 
 <p align="center">
   <img src="../assets/images/daegukjaharyu-ko.png" width="90%">
