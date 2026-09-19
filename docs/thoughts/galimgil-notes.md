@@ -6,6 +6,10 @@
 
 *Category: Thought Archive · Date: 2026-08-15*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/U1tRuQiKN0Y)
+
 <p align="center">
   <img src="../assets/images/galimgil-en.png" width="90%">
 </p>
@@ -141,6 +145,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## Chat과 Work 사이에서
 
 *Category: Thought Archive · Date: 2026-08-15*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/-vu4o8vyNOI)
 
 <p align="center">
   <img src="../assets/images/galimgil-ko.png" width="90%">
