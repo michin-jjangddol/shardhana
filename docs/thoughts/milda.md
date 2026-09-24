@@ -1,10 +1,14 @@
-> Location: docs/thoughts/milda-en.md
+> Location: docs/thoughts/milda.md
 
 # Milda
 
 ## A Small Question That Started Between Milda, Molda, Mill, and Mola
 
 *(Shardhana Thought Archive) · Date: 2026-08-25*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/j9yI9-1Kmpg)
 
 <p align="center">
   <img src="../assets/images/milda-en.png" width="90%">
@@ -115,6 +119,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 밀다, 몰다, mill, mola 사이에서 시작된 작은 의문
 
 *(Shardhana 생각창고) · Date: 2026-08-25*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/Anq_Roep8Fg)
 
 <p align="center">
   <img src="../assets/images/milda-ko.png" width="90%">
