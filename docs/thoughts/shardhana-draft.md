@@ -6,6 +6,10 @@
 
 *(Shardhana Thought Archive) · Date: 2026-08-18*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/0g-5PAibaeI)
+
 <p align="center">
   <img src="../assets/images/shardhana-draft-en.png" width="90%">
 </p>
@@ -129,6 +133,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 코드가 아직 보이는 시대 — 우리는 지금 어디쯤 와 있는 걸까
 
 *(Shardhana 생각창고) · Date: 2026-08-18*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/KxrIc3oqct4)
 
 <p align="center">
   <img src="../assets/images/shardhana-draft-ko.png" width="90%">
