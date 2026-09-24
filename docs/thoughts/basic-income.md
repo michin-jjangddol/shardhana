@@ -1,10 +1,14 @@
-> Location: docs/thoughts/basic-income-en.md
+> Location: docs/thoughts/basic-income.md
 
 # Basic Income
 
 ## A Small Question Left Standing Between Capitalism, AI, and Basic Income
 
 *(Shardhana Thought Archive) · Date: 2026-08-31*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/lCTishc4AuU)
 
 <p align="center">
   <img src="../assets/images/basic-income-en.png" width="90%">
@@ -137,6 +141,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 자본주의와 AI와 기본소득 사이에서 남은 작은 질문
 
 *(Shardhana 생각창고) · Date: 2026-08-31*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/Z-mRo0rw1Ao)
 
 <p align="center">
   <img src="../assets/images/basic-income-ko.png" width="90%">
