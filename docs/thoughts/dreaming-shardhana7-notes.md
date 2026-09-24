@@ -109,7 +109,9 @@ Shardhana didn't start with a finished answer. My thinking kept changing over th
 
 *This document was prepared with the assistance of Shana (GPT) and Laude (Claude).*
 
-> Location: docs/thoughts/dreaming-shardhana7-notes.md
+---
+<br>
+<br>
 
 # 꿈꾸는 샤드하나7
 ### 꿈과 현실환경과 내 생각을 합친, 조금 더 구체적인 꿈
