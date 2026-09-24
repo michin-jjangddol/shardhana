@@ -1,10 +1,14 @@
-> Location: docs/thoughts/ai-and-human-inference-en.md
+> Location: docs/thoughts/ai-and-human-inference.md
 
 # AI and Human
 
 ## The Power to Infer, and the Lie It Can Create
 
 *Category: AI Reflections · Date: 2026-08-21*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/sowWiHJjJm8)
 
 <p align="center">
   <img src="../assets/images/ai-and-human-inference-en.png" width="90%">
@@ -103,6 +107,10 @@ A record, from August 2026, of how the AI of that time explained itself.
 ## 추정하는 힘, 그리고 그 힘이 만드는 거짓말
 
 *Category: AI Reflections · Date: 2026-08-21*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/N7Gt3wJJJiY)
 
 <p align="center">
   <img src="../assets/images/ai-and-human-inference-ko.png" width="90%">
