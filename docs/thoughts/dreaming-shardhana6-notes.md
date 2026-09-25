@@ -6,6 +6,10 @@
 
 *(Shardhana Thought Archive) · Date: 2026-09-02*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/AFyqHjT-9os)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana6-en.png" width="90%">
 </p>
@@ -137,6 +141,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 로컬 세상과 작은 오케스트라를 꿈꾸며
 
 *(Shardhana 생각창고) · Date: 2026-09-02*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/8wr978hvwOs)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana6-ko.png" width="90%">
