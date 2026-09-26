@@ -5,6 +5,10 @@
 *(Shardhana Thought Archive)*
 *Date: 2026-09-19*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/GSBdoiX7P4A)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana7-en.png" width="90%">
 </p>
@@ -117,6 +121,10 @@ Shardhana didn't start with a finished answer. My thinking kept changing over th
 ### 꿈과 현실환경과 내 생각을 합친, 조금 더 구체적인 꿈
 *(Shardhana 생각창고)*
 *Date: 2026-09-19*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/6mKIEduijUc)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana7-ko.png" width="90%">
