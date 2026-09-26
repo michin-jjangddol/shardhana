@@ -6,6 +6,10 @@
 
 *(Shardhana Thought Archive) · Date: 2026-09-04*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/8WW8VzIeAgU)
+
 <p align="center">
   <img src="../assets/images/boussinesq-en.png" width="90%">
 </p>
@@ -105,6 +109,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## 오래된 한 줄의 식에서 SOG까지
 
 *(Shardhana 생각창고) · Date: 2026-09-04*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/5-ky4FCfH14)
 
 <p align="center">
   <img src="../assets/images/boussinesq-ko.png" width="90%">
