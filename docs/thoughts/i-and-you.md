@@ -6,6 +6,10 @@
 
 *(Shardhana Thought Archive) · Date: 2026-09-03*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/XmB5VRR2dq4)
+
 <p align="center">
   <img src="../assets/images/i-and-you-en.png" width="90%">
 </p>
@@ -163,6 +167,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 ## AX에서 시작해, 사람들이 가장 오래 불러온 짧은 말을 바라보다
 
 *(Shardhana 생각창고) · Date: 2026-09-03*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/YMadieQeJug)
 
 <p align="center">
   <img src="../assets/images/i-and-you-ko.png" width="90%">
