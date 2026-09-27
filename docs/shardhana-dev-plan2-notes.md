@@ -5,6 +5,10 @@
 
 *Date: 2026-09-26*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/1RYUC3Ykjjs)
+
 <p align="center">
   <img src="./assets/images/shardhana-dev-plan2-notes-en.png" width="90%">
 </p>
@@ -128,6 +132,10 @@ This gets written down here, for now.
 ## 도구를 만드는 것에서, 도구를 만들 수 있는 장소를 만드는 것으로
 
 *Date: 2026-09-26*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/I7bprt6j7uY)
 
 <p align="center">
   <img src="./assets/images/shardhana-dev-plan2-notes-ko.png" width="90%">
