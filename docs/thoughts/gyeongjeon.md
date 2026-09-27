@@ -1,9 +1,13 @@
-> Location: docs/thoughts/gyeongjeon-notes.md
+> Location: docs/thoughts/gyeongjeon.md
 
 # Scripture?
 ### Where Should This Time Be Spent
 *(Shardhana Thought Archive)*
 *Date: 2026-09-24*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/y1LHHye5yRA)
 
 <p align="center">
   <img src="../assets/images/gyeongjeon-notes-en.png" width="90%">
@@ -174,7 +178,6 @@ And today, too, I keep dreaming of a Shardhana that isn't finished yet.
 
 *This document was prepared with the assistance of Shana (GPT) and Laude (Claude).*
 
-
 ---
 <br>
 <br>
@@ -183,6 +186,10 @@ And today, too, I keep dreaming of a Shardhana that isn't finished yet.
 ### 현재의 시간을 어디에 쓸 것인가
 *(Shardhana 생각창고)*
 *Date: 2026-09-24*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/KpOEiNRB0eQ)
 
 <p align="center">
   <img src="../assets/images/gyeongjeon-notes-ko.png" width="90%">
