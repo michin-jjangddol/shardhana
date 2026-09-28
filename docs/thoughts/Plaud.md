@@ -5,6 +5,10 @@
 
 *Shardhana Thought Archive · 2026-09-28*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/zrlCor_MAMg)
+
 <p align="center">
   <img src="../assets/images/Plaud_en.png" width="90%">
 </p>
@@ -217,6 +221,10 @@ I'm quietly dreaming of.
 ## 하루는 광고와 함께 시작된다
 
 *Shardhana 생각창고 · 2026-09-28*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/adVj6AeMiiQ)
 
 <p align="center">
   <img src="../assets/images/Plaud_ko.png" width="90%">
