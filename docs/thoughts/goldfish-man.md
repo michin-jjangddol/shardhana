@@ -4,6 +4,10 @@
 
 *Shardhana Thought Archive · 2026-09-29*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/H4G2fA_DslQ)
+
 <p align="center">
   <img src="../assets/images/Goldfish-Man-en.png" width="90%">
 </p>
@@ -329,6 +333,10 @@ a **Goldfish Man** myself?
 ## Goldfish Man
 
 *Shardhana 생각창고 · 2026-09-29*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/QYSv9ItbBMI)
 
 <p align="center">
   <img src="../assets/images/Goldfish-Man-ko.png" width="90%">
