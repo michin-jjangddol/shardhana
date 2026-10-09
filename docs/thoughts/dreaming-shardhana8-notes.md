@@ -7,10 +7,10 @@
 
 ## 🎬 YouTube Video
 
-[Watch on YouTube](link coming soon)
+[Watch on YouTube](https://youtu.be/KnJLbMc71G0)
 
 <p align="center">
-  <img src="../assets/images/dreaming-shardhana8-en.png" width="90%">
+  <img src="../assets/images/dreaming-shardhana8-notes-en.png" width="90%">
 </p>
 
 ---
@@ -135,10 +135,10 @@ It's still a dream. But just as last year's dream became a small program, today'
 
 ## 🎬 YouTube Video
 
-[Watch on YouTube](link coming soon)
+[Watch on YouTube](https://youtu.be/fgbCTEpr5D4)
 
 <p align="center">
-  <img src="../assets/images/dreaming-shardhana8-ko.png" width="90%">
+  <img src="../assets/images/dreaming-shardhana8-notes-ko.png" width="90%">
 </p>
 
 ---
