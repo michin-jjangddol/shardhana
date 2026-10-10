@@ -9,7 +9,7 @@ description = "Shardhana structural analysis core (experimental)"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Lee Seok" }]
-license = { text = "MIT" }
+license = { text = "AGPL-3.0-only" }
 
 [tool.setuptools]
 package-dir = {"" = "src"}
