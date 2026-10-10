@@ -131,6 +131,7 @@ GitHub: https://github.com/michin-jjangddol
 
 - Website: https://shardhana.org
 - YouTube: https://youtube.com/@Shardhana-lab
+- Historical Archive (Naver Cafe): https://cafe.naver.com/fequalkx
 
 ---
 
@@ -279,6 +280,7 @@ GitHub: https://github.com/michin-jjangddol
 
 - Website: https://shardhana.org
 - YouTube: https://youtube.com/@Shardhana-lab
+- Historical Archive (Naver Cafe): https://cafe.naver.com/fequalkx
 
 ---
 
