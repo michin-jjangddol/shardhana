@@ -112,7 +112,7 @@ python -m shardhana
 
 ## 🔐 License
 
-Shardhana follows the GNU AGPL v3.0 license.
+Shardhana is licensed under the GNU AGPL v3.0 only.
 
 Anyone is free to use, study, modify, and share it.
 We value the spirit of open source and a culture of free research.
@@ -261,7 +261,7 @@ python -m shardhana
 
 ## 🔐 라이선스
 
-Shardhana는 GNU AGPL v3.0 라이선스를 따릅니다.
+Shardhana는 GNU AGPL v3.0 라이선스만을 따릅니다.
 
 누구나 자유롭게 사용, 연구, 수정, 공유할 수 있으며,
 오픈소스 정신과 자유로운 연구 문화를 지향합니다.
