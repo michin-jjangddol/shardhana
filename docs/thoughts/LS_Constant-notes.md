@@ -6,6 +6,10 @@ From One Kilogram to a Unit System for the Universe
 *(Shardhana Thought Archive)*  
 *Date: 2026-10-21*
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/PD_esS59xI4)
+
 <p align="center">
   <img src="../assets/images/LS_Constant_notes_en.png" width="90%">
 </p>
@@ -296,6 +300,10 @@ A thought begins with a small question and travels all the way to a standard tha
 
 *(Shardhana Thought Archive)*  
 *Date: 2026-10-21*
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/1Xq4CTbADE0)
 
 <p align="center">
   <img src="../assets/images/LS_Constant_notes_ko.png" width="90%">
