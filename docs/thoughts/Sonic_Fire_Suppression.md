@@ -7,6 +7,10 @@
 (Shardhana Thought Archive)
 Date: 2026-10-24
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/5dDJKfasFW4)
+
 <p align="center">
   <img src="../assets/images/Sonic_Fire_Suppression_en.png" width="90%">
 </p>
@@ -275,6 +279,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 (샤드하나 생각창고)
 날짜: 2026-10-24
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/uGI5guQr6O8)
 
 <p align="center">
   <img src="../assets/images/Sonic_Fire_Suppression_ko.png" width="90%">
