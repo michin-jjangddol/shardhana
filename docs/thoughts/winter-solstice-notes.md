@@ -7,6 +7,10 @@
 Shardhana Thought Archive
 Date: 2026-10-29
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/w2k6n5n8X2c)
+
 <p align="center">
   <img src="../assets/images/winter-solstice-notes_en.png" width="90%">
 </p>
@@ -307,6 +311,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 샤드하나 생각창고
 작성일: 2026-10-29
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/L_dcYRNZeCI)
 
 <p align="center">
   <img src="../assets/images/winter-solstice-notes_ko.png" width="90%">
