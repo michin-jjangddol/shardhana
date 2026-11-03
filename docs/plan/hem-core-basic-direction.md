@@ -9,6 +9,10 @@
 Date: 2026-11-03
 Status: Draft
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/xzT3_eRv2dA)
+
 <p align="center">
   <img src="../assets/images/hem-core-basic-direction_en.png" width="90%">
 </p>
@@ -403,6 +407,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 
 작성일: 2026-11-03
 상태: 초안
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/_J3fk-33vZ0)
 
 <p align="center">
   <img src="../assets/images/hem-core-basic-direction_ko.png" width="90%">
