@@ -8,6 +8,10 @@
 
 Date: 2026-11-12
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/AcRABGvKxOQ)
+
 <p align="center">
   <img src="../assets/images/hanaro_en.png" width="90%">
 </p>
@@ -301,6 +305,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 (Shardhana 생각창고)
 
 작성일: 2026-11-12
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/D_QNdZ_tJa0)
 
 <p align="center">
   <img src="../assets/images/hanaro_ko.png" width="90%">
