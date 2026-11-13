@@ -8,6 +8,10 @@
 
 Date: 2026-11-13
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/o_AXIgd12ZE)
+
 <p align="center">
   <img src="../assets/images/cad_en.png" width="90%">
 </p>
@@ -375,6 +379,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 (Shardhana 생각창고)
 
 작성일: 2026-11-13
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/IQzWZOTE1yM)
 
 <p align="center">
   <img src="../assets/images/cad_ko.png" width="90%">
