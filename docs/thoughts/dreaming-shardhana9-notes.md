@@ -8,6 +8,10 @@
 
 Date: 2026-11-16
 
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/SvUJpp_3H-0)
+
 <p align="center">
   <img src="../assets/images/dreaming-shardhana9_en.png" width="90%">
 </p>
@@ -283,6 +287,10 @@ This document was prepared with the assistance of Shana (GPT) and Laude (Claude)
 (Shardhana 생각창고)
 
 작성일: 2026-11-16
+
+## 🎬 YouTube Video
+
+[Watch on YouTube](https://youtu.be/6ji0pR_6BUc)
 
 <p align="center">
   <img src="../assets/images/dreaming-shardhana9_ko.png" width="90%">
